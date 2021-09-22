@@ -1,22 +1,29 @@
 {
-  "name": "hello-g0v",
-  "version": "0.0.1",
+  "name": "geheidzungxibguan",
+  "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "author": "SeanGau",
-  "license": "MIT",
   "scripts": {
     "start": "gulp server"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b1t-tw/geheidzungxibguan.git"
+  },
+  "author": "SeanGau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/b1t-tw/geheidzungxibguan/issues"
+  },
+  "homepage": "https://github.com/b1t-tw/geheidzungxibguan#readme",
   "dependencies": {
-    "fs": "0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
     "gulp-data": "^1.3.1",
-    "gulp-pug": "^4.0.1"
-  },
-  "devDependencies": {
-    "gulp-sass": "^4.1.0",
-    "node-sass": "^5.0.0"
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sitemap": "^8.0.0",
+    "node-sass": "^6.0.1",
+    "sass": "^1.42.0"
   }
 }
