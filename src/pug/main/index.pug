@@ -2,7 +2,58 @@ extends ../layout.pug
 block variables
     - title = ' - 首頁'
 block head
-    link(rel="stylesheet", href="/assets/css/index.css?version="+timestamp)
-    title 
+    link(rel="stylesheet", href="/assets/css/main.css?version="+timestamp)
 block body
-    h1 hello
+    a#to-top(href="#top" data-aos="fade-up" data-aos-anchor="#rooms"): i.fas.fa-chevron-up
+    .container.py-5#top
+        a#home.d-block(href="/")
+            img.head-1(src="/assets/img/main_word_1.png")
+            img.head-2(src="/assets/img/logo_small.png")
+        #main-disc.p-4.p-md-5.my-5(data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000")
+            p 那是種習慣
+            p 習慣，可說是身體直覺的反應。反應源於日常生活中未注意的行為積累，時間久了，身體產生記憶、逐漸內化。當行為變成不經意地習慣動作後，我們也就不再關注其中的細節。
+            p 而這些行為並非沒有脈絡可循
+            p 仔細觀察後，會發現由個體組成的族群，他們會有雷同的習慣，而這些習慣也承載著每個家的生活記憶。像是做菜一樣，下要多少油、多少糖、多少鹽，久了就抓到了一個比例，那是屬於自己的口味，家的味道。當我們集合這些行為的故事，人的形象、族群的文化脈絡，也會逐漸清晰。透過習慣的觀察與描述，拓展身份認同與族群意識的渴望。
+            p 在這次計畫中，邀請周孟曄、許雁婷、楊志雅三位藝術家以身體經驗出發，從姿勢、語言和飲食，觀察出沒於城南地區的客家人，挖掘其日常中不自覺的習慣，捕捉生活樣貌。輕放刻板印象，填入帶有「人」味的故事。也邀請大家將注意力放回自己身邊，留心觀察習慣所養成的力量。
+            p.pt-4.text-end 策展人/ 洪秉綺 (+)
+        hr
+        #rooms.container.my-5.px-4(data-aos="fade-in" data-aos-duration="1000")
+            .row.align-items-center.justify-content-center.py-2
+                .col-md-4
+                    a(href="/about"): .room-block
+                .col-md-4
+                    a(href="/about"): .room-block
+                .col-md-4
+                    a(href="/about"): .room-block
+            .row.align-items-center.justify-content-center.py-2
+                .col-md-4
+                    a(href="/about"): .room-block
+                .col-md-4
+                    a(href="/about"): .room-block
+        hr
+        #footer.p-4.p-md-5.my-5(data-aos="fade-in" data-aos-duration="1000")
+            p 2021當代客家策展徵件-「城南客家」
+            p 展覽名稱：那是種習慣 
+            p 客語漢字： 該係一種習慣
+            p 客語標音：ge he idˋ zungˋ xib guan （四縣腔）
+            p 不負責任標音法：ㄍㄟ嘿地宗C官
+            br
+            p 策展人：洪秉綺
+            p 參展藝術家： 周孟曄、 許雁婷 、楊志雅
+            p 執行助理：許絲婷
+            p 視覺設計：洪芷寧
+            p 英譯人員：陳宜艷
+            p 網頁設計：高任翔
+            p 影音規劃：黑鳥音像
+            p 工作坊影片剪輯：許又仁
+            br
+            p 指導單位
+                img(src="/assets/img/logo_客委會.png")
+            p 主辦單位
+                img(src="/assets/img/logo_客基會.png")
+            br
+            p 特別感謝：
+            p 受訪者：劉月鵞、邱瑞英、張仲良、張貝梅（葉媽）、劉又嘉、黃江秀珍、黃紹國、徐蓮嬌、黃美雪、黃美雯、黃聖雅
+            br
+            p 以及曾經幫助過我們的人：
+            p 小光、李曉雯、林佩樺、林思駿、林鈺婷、洪芙婕、徐聖情、梁祐祥、莊喬安、許瑞君、許金樹、陳律瑄、曾振權、溫佳琦、溫美珠、詹智雄、蔣宇傑、羅惠、一碼 IMMA 

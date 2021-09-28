@@ -4,11 +4,12 @@ block head
     link(rel="stylesheet", href="/assets/css/index.css?version="+timestamp)
     title 那是種習慣
 block body
-    .main.main-bg
-    .main-word-1
-    .main-word-2
-    .main.main-float-3.d-none.d-md-block
-    .main.main-float-1
+    a(href="main")
+        .main.main-bg
+        .main-word-1
+        .main-word-2
+        .main.main-float-3.d-none.d-md-block
+        .main.main-float-1
 block script 
     script.
         $(window).mousemove(function( event ) {
@@ -20,5 +21,5 @@ block script
         });
         
         $(window).on('click', function() {
-            //window.location.href = window.location.href + "/main"
+            window.location.href = window.location.href + "/main"
         });
