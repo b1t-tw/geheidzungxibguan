@@ -1,7 +1,5 @@
-body, .box {
+body {
   overflow: hidden;
-  height: 100vh;
-  width: 100vw;
   position: relative;
 }
 
