@@ -1,21 +1,25 @@
 extends ./layout.pug
 block variables
 block head
-    link(rel="stylesheet", href="./assets/css/index.css")
+    link(rel="stylesheet", href="/assets/css/index.css")
     title 那是種習慣
 block body
-    .main.main-bg
-    .main-word-1
-    .main-word-2
-    .main.main-float-3.d-none.d-md-block
-    .main.main-float-1
-    .main.main-float-2
+    .box
+        .main.main-bg
+        .main-word-1
+        .main-word-2
+        .main.main-float-3.d-none.d-md-block
+        .main.main-float-1
 block script 
     script.
         $(window).mousemove(function( event ) {
             var xPos = 100*event.pageX/window.innerWidth -50;
             var yPos = 100*event.pageY/window.innerHeight -50;
-            $(".main-float-1").css({"left": `${xPos/40}%`, "top": `${yPos/40}%`});
-            $(".main-float-2").css({"left": `${xPos/20}%`, "top": `${yPos/20}%`});
+            $(".main-word-1").css({"transform": `translate(${xPos/20}%, ${yPos/20}%`});
+            $(".main-word-2").css({"transform": `translate(${xPos/20}%, ${yPos/20}%`});
             $(".main-float-3").css({"left": `${10 + xPos/50}%`, "top": `${10 + yPos/50}%`});
+        });
+        
+        $(window).on('click', function() {
+            //window.location.href = window.location.href + "/main"
         });
