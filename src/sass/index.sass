@@ -2,6 +2,7 @@ body, .box
     overflow: hidden
     height: 100vh
     width: 100vw
+    position: relative
 .main
     height: 100%
     width: 100%
@@ -27,6 +28,7 @@ body, .box
     background-image: url("/assets/img/main2_float_1.png")
     animation: rotate 4s ease-in-out infinite alternate
 .main-float-3
+    background-size: 100%
     background-image: url("/assets/img/main_float_3.png")
     height: 80%
     width: 80%
@@ -66,4 +68,6 @@ body, .box
 @media ( max-width: 768px )
     .main
         background-size: 150%
+    .main-float-1
+        transform-origin: 82% 52%
     
