@@ -7,6 +7,24 @@ body
     font-size: 1.25rem
     line-height: 2.5rem
 
+@keyframes arrow-float
+    0%
+        bottom: .5rem
+    100%
+        bottom: 1rem
+        
+#to-top
+    text-align: center
+    font-size: 3rem
+    width: 3rem
+    color: white
+    display: block
+    position: fixed
+    bottom: .5rem
+    left: calc(50% - 1.5rem)
+    z-index: 99999
+    animation: arrow-float 1s ease-in-out infinite alternate
+
 /* width */
 ::-webkit-scrollbar
     width: 12px

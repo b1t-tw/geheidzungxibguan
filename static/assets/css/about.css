@@ -1,5 +1,6 @@
 @charset "UTF-8";
 #go-back {
+  filter: drop-shadow(2px 2px 1px black);
   position: relative;
   left: 85%;
 }
@@ -37,7 +38,7 @@
 }
 
 .image-2 {
-  background-image: url("/assets/img/about/羅斯福路.jpg");
+  background-image: url("/assets/img/about/公館2.jpg");
 }
 
 .image-3 {
@@ -60,16 +61,46 @@
   background-image: url("/assets/img/about/南昌街.jpg");
 }
 
-.talk-block {
-  width: 60%;
-  position: relative;
-  padding: 2rem;
-  margin-bottom: 10rem;
-  background-color: rgba(255, 255, 255, 0.85);
+.image-8 {
+  background-image: url("/assets/img/about/台大.jpg");
 }
-.talk-block p {
+
+.image-9 {
+  background-image: url("/assets/img/about/羅斯福路.jpg");
+}
+
+.image-10 {
+  background-image: url("/assets/img/about/寶藏巖.jpg");
+}
+
+.image-11 {
+  background-image: url("/assets/img/about/永康街1.jpg");
+}
+
+.image-12 {
+  background-image: url("/assets/img/about/永康公園.jpg");
+}
+
+.info-block, .talk-block {
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.info-block p, .talk-block p {
   text-align: justify;
   margin-bottom: 0;
+}
+
+.info-block {
+  margin-bottom: 3rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.talk-block {
+  color: white;
+  width: 60%;
+  position: relative;
+  margin-bottom: 10rem;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .talk-block-left {
@@ -102,6 +133,11 @@
   background-image: url("/assets/img/zeng_thumb.jpg");
 }
 
+.info-box {
+  background-color: #eddda2;
+  margin-bottom: 10rem;
+}
+
 @media (max-width: 768px) {
   #go-back {
     left: 0;
@@ -110,9 +146,12 @@
     width: 50%;
   }
 
+  .info-block, .talk-block {
+    padding: 1rem;
+  }
+
   .talk-block {
     width: 90%;
-    padding: 1rem;
   }
 
   .talk-block-right {

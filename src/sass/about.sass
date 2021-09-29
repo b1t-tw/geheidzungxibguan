@@ -1,4 +1,5 @@
 #go-back
+    filter: drop-shadow(2px 2px 1px black)
     position: relative
     left: 85%
     img
@@ -25,7 +26,7 @@
 .image-1
     background-image: url("/assets/img/about/永康街.jpg")
 .image-2
-    background-image: url("/assets/img/about/羅斯福路.jpg")
+    background-image: url("/assets/img/about/公館2.jpg")
 .image-3
     background-image: url("/assets/img/about/台北植物園.jpg")
 .image-4
@@ -36,16 +37,32 @@
     background-image: url("/assets/img/about/東門市場1.jpg")
 .image-7
     background-image: url("/assets/img/about/南昌街.jpg")
+.image-8
+    background-image: url("/assets/img/about/台大.jpg")
+.image-9
+    background-image: url("/assets/img/about/羅斯福路.jpg")
+.image-10
+    background-image: url("/assets/img/about/寶藏巖.jpg")
+.image-11
+    background-image: url("/assets/img/about/永康街1.jpg")
+.image-12
+    background-image: url("/assets/img/about/永康公園.jpg")
 
-.talk-block
-    width: 60%
-    position: relative
+.info-block, .talk-block
     padding: 2rem
-    margin-bottom: 10rem
-    background-color: rgba(255,255,255,.85)
+    border-radius: 1rem
     p
         text-align: justify
         margin-bottom: 0
+.info-block
+    margin-bottom: 3rem
+    background-color: rgba(255,255,255,.2)
+.talk-block
+    color: white
+    width: 60%
+    position: relative
+    margin-bottom: 10rem
+    background-color: rgba(0,0,0,.8)
 .talk-block-left
     left: 0
     .avartar
@@ -65,13 +82,18 @@
 .avartar-zeng
     background-image: url("/assets/img/zeng_thumb.jpg")
 
+.info-box
+    background-color: rgba(237,221,162,1)
+    margin-bottom: 10rem
+    
 @media ( max-width: 768px )
     #go-back
         left: 0
         img
             width: 50%
+    .info-block, .talk-block
+        padding: 1rem
     .talk-block
         width: 90%
-        padding: 1rem
     .talk-block-right
         left: 10%
