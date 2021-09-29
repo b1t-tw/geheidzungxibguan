@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #home img {
   position: relative;
   left: 55%;
@@ -21,12 +22,35 @@
 }
 
 #rooms .room-block {
-  height: 200px;
+  height: 0;
+  position: relative;
+  padding-top: 60%;
   background-color: tomato;
+  filter: drop-shadow(-2px 2px 0px black);
+  background-position: center;
+  background-size: cover;
   transition: 0.3s;
 }
 #rooms .room-block:hover {
   background-color: dodgerblue;
+  filter: drop-shadow(-5px 5px 2px black);
+  transform: translate(5px, -5px);
+}
+#rooms .room-about::after {
+  content: "關於城南客家";
+  color: black;
+  position: absolute;
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 2em;
+  line-height: 2em;
+  left: 0;
+  top: calc(50% - 1em);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#rooms .room-about {
+  background-image: url("/assets/img/about_thumb.jpg");
 }
 
 #footer {

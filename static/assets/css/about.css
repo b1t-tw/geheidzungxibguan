@@ -1,8 +1,14 @@
 @charset "UTF-8";
+.container {
+  overflow: hidden;
+  position: relative;
+}
+
 #go-back {
   filter: drop-shadow(2px 2px 1px black);
   position: relative;
   left: 85%;
+  transition: 0.3s;
 }
 #go-back img {
   margin: 1rem;
@@ -81,9 +87,18 @@
   background-image: url("/assets/img/about/永康公園.jpg");
 }
 
+.titles {
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 50vh;
+}
+
 .info-block, .talk-block {
   padding: 2rem;
   border-radius: 1rem;
+  display: block;
 }
 .info-block p, .talk-block p {
   text-align: justify;
@@ -136,6 +151,9 @@
 .info-box {
   background-color: #eddda2;
   margin-bottom: 10rem;
+}
+.info-box a {
+  word-break: break-all;
 }
 
 @media (max-width: 768px) {
