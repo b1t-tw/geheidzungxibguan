@@ -26,6 +26,20 @@ h1, h2, h3, h4 {
     bottom: 1rem;
   }
 }
+#header {
+  padding: 1rem 2rem;
+}
+#header .go-back {
+  filter: drop-shadow(2px 2px 1px black);
+  transition: 0.3s;
+  width: 100%;
+  display: inline-block;
+}
+#header .go-back img {
+  max-width: 100px;
+  width: 100%;
+}
+
 #to-top {
   text-align: center;
   font-size: 3rem;

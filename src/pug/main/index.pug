@@ -1,16 +1,15 @@
 extends ../layout.pug
 block variables
-    - title = ' - 首頁'
 block head
     link(rel="stylesheet", href="/assets/css/main.css?version="+timestamp)
 block body
     a#to-top(href="#" data-aos="fade-up" data-aos-anchor="#rooms"): i.fas.fa-chevron-up
     .modal.fade#irisModal(tabindex='-1' aria-hidden='true')
         .modal-dialog.modal-dialog-centered.modal-lg: .modal-content
-            .modal-header
+            .modal-header.px-4
+                h3.modal-title 洪秉綺
                 button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
-            .modal-body.px-4
-                h3 洪秉綺
+            .modal-body.px-4.pt-0
                 p 獨立策展人與專業藝術行政，現任台灣藝文空間連線 TASA 協會理事長。曾任竹圍工作室營運總監、台北紅館主任。 畢業於英國倫敦金匠大學(Goldsmiths)文化產業碩士，研究游擊式文化在仕紳化空間的政治關係。目前關注在藝文環境支持系統、跨界跨領域合作、國際交流以及在地社群連結。相信串連不同的人和組織可以共創出更具影響力的未來。
 
     .container.py-5
@@ -31,7 +30,7 @@ block body
                 .col-md-4(data-aos="zoom-in" data-aos-delay="50" data-aos-offset="200")
                     a(href="/about"): .room-block.room-about
                 .col-md-4(data-aos="zoom-in" data-aos-delay="100" data-aos-offset="200")
-                    a(href="/about"): .room-block.room-chou
+                    a(href="/chou"): .room-block.room-chou
                 .col-md-4(data-aos="zoom-in" data-aos-delay="150" data-aos-offset="200")
                     a(href="/about"): .room-block.room-hsu
                 .col-md-4(data-aos="zoom-in" data-aos-delay="150")
@@ -55,9 +54,9 @@ block body
             p 影音規劃：黑鳥音像
             p 工作坊影片剪輯：許又仁
             br
-            p 指導單位
+            p.text-start 指導單位
                 img(src="/assets/img/logo_客委會.png")
-            p 主辦單位
+            p.text-start 主辦單位
                 img(src="/assets/img/logo_客基會.png")
             br
             p 特別感謝：
