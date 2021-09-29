@@ -10,6 +10,14 @@ body {
   line-height: 2.5rem;
 }
 
+p {
+  text-align: justify;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
+
 @keyframes arrow-float {
   0% {
     bottom: 0.5rem;
@@ -27,8 +35,19 @@ body {
   position: fixed;
   bottom: 0.5rem;
   left: calc(50% - 1.5rem);
-  z-index: 99999;
+  z-index: 999;
   animation: arrow-float 1s ease-in-out infinite alternate;
+}
+
+.more-info-button {
+  color: #666;
+  padding: 0 0.5rem;
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 0;
+  border: 0;
 }
 
 /* width */
