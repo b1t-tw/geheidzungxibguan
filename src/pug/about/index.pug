@@ -16,8 +16,11 @@ block head
     link(rel="prefetch" href="/assets/img/about/永康街1.jpg")
     link(rel="prefetch" href="/assets/img/about/永康公園.jpg")
 block body
-    a#go-back(href="/main")
-        img.head-2(src="/assets/img/logo_small.png")
+    .container-fluid#header: .row
+        .col-auto.col-md-10
+        .col
+            a.go-back(href="/main")
+                img(src="/assets/img/logo_small.png")
     .bg-image-group
         .bg-box(data-aos="zoom-out" data-aos-delay="500" data-aos-duration="500")
             .carousel.slide.carousel-fade.h-100(data-bs-ride="carousel" data-bs-touch="false" data-bs-interval="6000")

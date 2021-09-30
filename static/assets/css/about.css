@@ -4,17 +4,6 @@
   position: relative;
 }
 
-#go-back {
-  filter: drop-shadow(2px 2px 1px black);
-  position: relative;
-  left: 85%;
-  transition: 0.3s;
-}
-#go-back img {
-  margin: 1rem;
-  width: 10%;
-}
-
 .bg-box {
   position: fixed;
   top: 0;
@@ -157,13 +146,6 @@
 }
 
 @media (max-width: 768px) {
-  #go-back {
-    left: 0;
-  }
-  #go-back img {
-    width: 50%;
-  }
-
   .info-block, .talk-block {
     padding: 1rem;
   }

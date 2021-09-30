@@ -26,10 +26,12 @@ h1, h2, h3, h4
         transition: .3s
         width: 100%
         display: inline-block
+        text-align: right
+        &:hover
+            filter: drop-shadow(2px 2px 1px #D4295E)
         img
             max-width: 100px
             width: 100%
-        
 
 #to-top
     text-align: center
@@ -44,8 +46,11 @@ h1, h2, h3, h4
     animation: arrow-float 1s ease-in-out infinite alternate
 
 .more-info-button
-    color: #666
+    color: #AAA
     padding: 0 .5rem
+    transition: .3s
+    &:hover
+        color: #D4295E
 
 .modal-content
     background-color: rgba(255,255,255,.85)
