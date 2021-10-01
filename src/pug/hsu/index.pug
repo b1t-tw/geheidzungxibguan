@@ -76,9 +76,8 @@ block script
                 $(this)[0].pause();
             });
         });
-        $(".random-block").each(function(){
+
+        $(".random-block").sort(() => Math.random() - 0.5).each(function(){
             $(this).css({"width": `${250+Math.random()*150}px`});
-            if(Math.random() > 0.7) {
-                $("#content-4 .modal-body .container").append(this);
-            }
+            $("#content-4 .modal-body .container").append(this);
         });
