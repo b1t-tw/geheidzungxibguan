@@ -1,0 +1,35 @@
+extends ../layout.pug
+block variables
+    - title = ' - 今晡日炊粄仔／楊志雅'
+block head
+    link(rel="stylesheet", href="/assets/css/yang.css?version="+timestamp)
+block body
+    .modal.info-modal.fade#chouModal(tabindex='-1' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered.modal-lg: .modal-content
+            .modal-header.px-4
+                h3.modal-title 楊志雅
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body.px-4.pt-0
+                p 1989年生於花蓮。2016年取得國立臺灣師範大學美術系水墨創作碩士學位，擅以東方複合媒材進行創作。近年創作多以日常料理與飲食習慣為主軸展開互動和實驗，結合採集採購、下廚煮食或與他人共桌進食的藝術行動，來探索人與人之間的關係，進而分享文化和交流生活價值之異同，期能喚醒活化飲食相關的生活記憶與感官經驗。
+
+    .container-fluid.pb-5#header: .row
+        .col-8
+            h4 今晡日炊粄仔／楊志雅
+                a.more-info-button(role="button" href="#" data-bs-toggle="modal" data-bs-target="#chouModal"): i.far.fa-plus-square
+        .col
+            a.go-back(href="/main")
+                img(src="/assets/img/logo_small.png")
+
+    .container.final.pb-5
+        .row.final-top
+            .col-4: .final-left
+            .col-4: .final-center
+            .col-4: .final-right
+        .row.final-bottom
+            .col-4: .final-left
+            .col-4: .final-center
+                img(src="/assets/img/yang/mid.png")
+            .col-4: .final-right
+
+    .container.ingredient.pb-5
+        h1 AAA

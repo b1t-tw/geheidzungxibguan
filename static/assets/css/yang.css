@@ -1,0 +1,37 @@
+body {
+  background-color: #EAC3A2;
+}
+
+.final .final-left, .final .final-center, .final .final-right {
+  height: 0;
+  padding-bottom: 100%;
+  margin: 0.5rem 0;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+.final .final-top .final-left {
+  background-image: url("/assets/img/yang/final_left.jpg");
+}
+.final .final-top .final-center {
+  background-image: url("/assets/img/yang/final_center.jpg");
+}
+.final .final-top .final-right {
+  background-image: url("/assets/img/yang/final_right.jpg");
+}
+.final .final-bottom .final-left {
+  background-image: url("/assets/img/yang/left.png");
+}
+.final .final-bottom .final-center {
+  overflow-y: scroll;
+}
+.final .final-bottom .final-center img {
+  width: 100%;
+}
+.final .final-bottom .final-right {
+  background-image: url("/assets/img/yang/right.png");
+}
+
+.ingredient {
+  height: 100vh;
+}
