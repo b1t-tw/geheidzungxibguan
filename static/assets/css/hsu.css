@@ -1,0 +1,23 @@
+.out-box {
+  height: 100%;
+  padding: 1rem 0;
+}
+.out-box a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.works-modal .modal-header {
+  border: 0;
+}
+.works-modal .modal-content {
+  background-color: #EDDDA2;
+}
+
+@media (min-width: 768px) {
+  .h-md-100 {
+    height: 100% !important;
+  }
+}

@@ -4,7 +4,7 @@ block head
     link(rel="stylesheet", href="/assets/css/main.css?version="+timestamp)
 block body
     a#to-top(href="#" data-aos="fade-up" data-aos-anchor="#rooms"): i.fas.fa-chevron-up
-    .modal.fade#irisModal(tabindex='-1' aria-hidden='true')
+    .modal.info-modal.fade#irisModal(tabindex='-1' aria-hidden='true')
         .modal-dialog.modal-dialog-centered.modal-lg: .modal-content
             .modal-header.px-4
                 h3.modal-title 洪秉綺
@@ -32,11 +32,11 @@ block body
                 .col-md-4(data-aos="zoom-in" data-aos-delay="100" data-aos-offset="200")
                     a(href="/chou"): .room-block.room-chou
                 .col-md-4(data-aos="zoom-in" data-aos-delay="150" data-aos-offset="200")
-                    a(href="/about"): .room-block.room-hsu
+                    a(href="/hsu"): .room-block.room-hsu
                 .col-md-4(data-aos="zoom-in" data-aos-delay="150")
-                    a(href="/about"): .room-block.room-yang
+                    a(href="/yang"): .room-block.room-yang
                 .col-md-4(data-aos="zoom-in" data-aos-delay="200")
-                    a(href="/about"): .room-block.room-more
+                    a(href="/more"): .room-block.room-more
         hr
         #footer.p-4.p-md-5.my-5(data-aos="fade-in" data-aos-duration="1000")
             p 2021當代客家策展徵件-「城南客家」

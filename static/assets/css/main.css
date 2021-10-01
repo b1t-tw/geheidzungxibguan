@@ -60,6 +60,9 @@
 #rooms .room-chou {
   background-image: url("/assets/img/chou_thumb.jpg");
 }
+#rooms .room-chou::after {
+  content: "在你身邊／周孟曄";
+}
 #rooms .room-hsu {
   background-image: url("/assets/img/hsu_thumb.jpg");
 }

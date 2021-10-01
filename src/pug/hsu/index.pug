@@ -1,0 +1,78 @@
+extends ../layout.pug
+block variables
+    - title = ' - 客話Hak-fa — 轉屋下／許雁婷'
+block head
+    link(rel="stylesheet", href="/assets/css/hsu.css?version="+timestamp)
+block body
+    .modal.fade.info-modal#chouModal(tabindex='-1' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered.modal-lg: .modal-content
+            .modal-header.px-4
+                h3.modal-title 許雁婷
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body.px-4.pt-0
+                p 關注聲音蘊涵的文化脈絡與紋理，以及聲音之於周遭世界另種角度的體認，作品常映照聲音與環境、個人/集體記憶或內在情緒的關係。常以田野錄音為主要素材，混合電子和物件聲響，擺盪在錄音聲音與物件的紀錄及虛構、敘事及想像特質間，以聲音紀錄片、音景作曲、電子原音音樂、裝置、表演等形式呈現。另也從事舞蹈劇場及影像聲音設計/配樂。
+    .modal.fade.works-modal#content-1(tabindex='-1' aria-hidden='true' data-bs-backdrop="static" data-bs-keyboard="false")
+        .modal-dialog.modal-fullscreen: .modal-content
+            .modal-header.px-4
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body.px-4.pt-0
+                include ./works/1.pug
+    .modal.fade.works-modal#content-2(tabindex='-1' aria-hidden='true' data-bs-backdrop="static" data-bs-keyboard="false")
+        .modal-dialog.modal-fullscreen: .modal-content
+            .modal-header.px-4
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body.px-4.pt-0
+                include ./works/2.pug
+    .modal.fade.works-modal#content-3(tabindex='-1' aria-hidden='true' data-bs-backdrop="static" data-bs-keyboard="false")
+        .modal-dialog.modal-fullscreen: .modal-content
+            .modal-header.px-4
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body.px-4.pt-0
+                include ./works/3.pug
+    .modal.fade.works-modal#content-4(tabindex='-1' aria-hidden='true' data-bs-backdrop="static" data-bs-keyboard="false")
+        .modal-dialog.modal-fullscreen: .modal-content
+            .modal-header.px-4
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body.px-4.pt-0
+                include ./works/4.pug
+    
+    .d-flex.flex-column.h-100.pb-5
+        .container-fluid#header: .row
+            .col-auto.col-md-10
+                h4 客話Hak-fa — 轉屋下／許雁婷
+
+                    a.more-info-button(role="button" href="#" data-bs-toggle="modal" data-bs-target="#chouModal"): i.far.fa-plus-square
+            .col
+                a.go-back(href="/main")
+                    img(src="/assets/img/logo_small.png")
+
+        .container.flex-grow-1.py-4: .row.h-100 
+            .col-md-3.h-50.h-md-100
+                .out-box
+                    a(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-1") 1
+            .col-md-6.h-100: .row.h-100
+                .col-12.h-50
+                    .out-box 
+                        a(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-2") 2
+                .col-12.h-50
+                    .out-box
+                        a(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-3") 3
+            .col-md-3.h-50.h-md-100
+                .out-box 
+                    a(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-4") 4
+block script 
+    script.
+        $(function(){
+            if(window.location.hash) {
+                var hash = window.location.hash;
+                $(hash).modal('toggle');
+            }
+        });
+        $(".out-box a[data-bs-toggle='modal']").on("click", function(e) {
+            window.location.hash = $(this).data("bs-target");
+        });
+        $(".btn-close").on("click", function(e) {
+            $("audio").each(function(){
+                $(this)[0].pause();
+            });
+        });
