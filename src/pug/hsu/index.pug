@@ -33,7 +33,7 @@ block body
         .modal-dialog.modal-fullscreen: .modal-content
             .modal-header.px-4
                 button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
-            .modal-body.px-4.pt-0
+            .modal-body.px-4.d-flex.align-items-center
                 include ./works/4.pug
 
     .d-flex.flex-column.h-100.pb-5
@@ -79,5 +79,5 @@ block script
 
         $(".random-block").sort(() => Math.random() - 0.5).each(function(){
             $(this).css({"width": `${250+Math.random()*150}px`});
-            $("#content-4 .modal-body .container").append(this);
+            $("#content-4 .modal-body .container-fluid").append(this);
         });
