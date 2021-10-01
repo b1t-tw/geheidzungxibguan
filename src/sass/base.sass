@@ -1,7 +1,6 @@
 html, body
     height: 100%
 body
-    overflow: overlay
     background-color: #EDDDA2
     font-family: 'Noto Sans TC', sans-serif
     font-size: 1.25rem
@@ -46,10 +45,12 @@ h1, h2, h3, h4
     animation: arrow-float 1s ease-in-out infinite alternate
 
 .more-info-button
-    color: #AAA
-    padding: 0 .5rem
+    color: inherit
+    opacity: .6
+    padding-left: .5rem
     transition: .3s
     &:hover
+        opacity: 1
         color: #D4295E
 .info-modal
     .modal-content
@@ -59,15 +60,15 @@ h1, h2, h3, h4
 
 /* width */
 ::-webkit-scrollbar
-    width: 12px
+    width: 10px
 /* Track */
 ::-webkit-scrollbar-track
     background: transparent
+    border: 3px solid transparent
 /* Handle */
 ::-webkit-scrollbar-thumb
     background: #FFF
-    border: 3px solid transparent
-    border-radius: 6px
+    border-radius: 5px
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover
     background: #EEE

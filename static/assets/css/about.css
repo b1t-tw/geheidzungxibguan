@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  overflow: overlay;
+}
+
 .container {
   overflow: hidden;
   position: relative;

@@ -36,7 +36,7 @@
 }
 #rooms .room-block:hover {
   background-color: dodgerblue;
-  filter: drop-shadow(-5px 5px 2px black);
+  filter: drop-shadow(-5px 5px 2px black) brightness(1.2);
   transform: translate(5px, -5px);
 }
 #rooms .room-block::after {
@@ -65,6 +65,9 @@
 }
 #rooms .room-hsu {
   background-image: url("/assets/img/hsu_thumb.jpg");
+}
+#rooms .room-hsu::after {
+  content: "客話Hak-fa - 轉屋下／許雁婷";
 }
 #rooms .room-yang {
   background-image: url("/assets/img/yang_thumb.jpg");
