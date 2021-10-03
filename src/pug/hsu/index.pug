@@ -71,10 +71,14 @@ block script
             }
         });
         $(".out-box a[data-bs-toggle='modal']").on("click", function(e) {
-            window.location.hash = $(this).data("bs-target");
+            const url = new URL(window.location);
+            url.hash = $(this).data("bs-target");
+            window.history.replaceState({}, '', url);
         });
         $(".btn-close").on("click", function(e) {
-            window.location.hash = "";
+            const url = new URL(window.location);
+            url.hash = "";
+            window.history.replaceState({}, '', url);
             $("audio").each(function(){
                 $(this)[0].pause();
             });
