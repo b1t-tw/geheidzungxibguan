@@ -1,0 +1,21 @@
+extends ../layout.pug
+block variables
+    - title = ' - 還有更多～'
+block head
+    link(rel="stylesheet", href="/assets/css/more.css?version="+timestamp)
+block body
+
+    .d-flex.flex-column.h-100
+        .container-fluid.pb-5#header: .row
+            .col-8
+            .col
+                a.go-back(href="/main#rooms")
+                    img(src="/assets/img/logo_small.png")
+        .container.text-center
+            h1.pb-4 還有更多～
+            p.text-center 故事總是說不完，哪天有機會，再帶你們到我熟悉的城南，<br>我新認識的城南，以及那些人告訴我的和我所記得的事。
+            .row.justify-content-center
+                .col-6.col-md-3.text-center.d-grid
+                    a.btn.btn-warning(href="https://docs.google.com/forms/d/e/1FAIpQLScusbLchqrHpWNE9UqQm2H6kiJvRt5kNoayXg6r4otMDybokw/viewform" target="_blank") 由你來接棒
+                .col-6.col-md-3.text-center.d-grid
+                    a.btn.btn-warning(href="#" target="_blank") 工作坊

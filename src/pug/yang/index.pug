@@ -2,8 +2,24 @@ extends ../layout.pug
 block variables
     - title = ' - 今晡日炊粄仔／楊志雅'
 block head
-    link(rel="stylesheet", href="/assets/css/yang.css?version="+timestamp)
+    link(rel="stylesheet" href="/assets/css/yang.css?version="+timestamp)
 block body
+    mixin ingr_modal(name, title, size)
+        .modal.info-modal.fade(id=name+"Modal" tabindex='-1' aria-hidden='true')
+            .modal-dialog.modal-dialog-centered: .modal-content
+                .modal-header.px-4
+                    button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+                .modal-body.px-4.pt-0
+                    img(src="/assets/img/yang/thumb/"+name+".jpg")
+                    h4= title
+                    p
+                        | 膠彩   Eastern Gouache
+                        br
+                        =size+", 2021"
+
+    mixin ingr_button(name)
+        a.ingr-click(href="#" data-bs-toggle="modal" data-bs-target="#"+name+"Modal"): img(src="/assets/img/yang/thumb/"+name+".jpg")
+
     .modal.info-modal.fade#chouModal(tabindex='-1' aria-hidden='true')
         .modal-dialog.modal-dialog-centered.modal-lg: .modal-content
             .modal-header.px-4
@@ -17,19 +33,100 @@ block body
             h4 今晡日炊粄仔／楊志雅
                 a.more-info-button(role="button" href="#" data-bs-toggle="modal" data-bs-target="#chouModal"): i.far.fa-plus-square
         .col
-            a.go-back(href="/main")
+            a.go-back(href="/main#rooms")
                 img(src="/assets/img/logo_small.png")
+    
+    +ingr_modal("aicaoban", "艾粄", "25 × 25 cm")
+    +ingr_modal("pumpkinban", "南瓜粄", "25 × 25 cm")
+    +ingr_modal("niuwenshui", "牛汶水", "25 × 25 cm")
 
     .container.final.pb-5
         .row.final-top
-            .col-4: .final-left
-            .col-4: .final-center
-            .col-4: .final-right
+            .col-4: a.ingr-click(href="#" data-bs-toggle="modal" data-bs-target="#aicaobanModal"): .final-left
+            .col-4: a.ingr-click(href="#" data-bs-toggle="modal" data-bs-target="#pumpkinbanModal"): .final-center
+            .col-4: a.ingr-click(href="#" data-bs-toggle="modal" data-bs-target="#niuwenshuiModal"): .final-right
         .row.final-bottom
-            .col-4: .final-left
-            .col-4: .final-center
-                img(src="/assets/img/yang/mid.png")
-            .col-4: .final-right
+            .col-6.col-md-4: .final-left
+            .d-none.d-md-block.col-4: .final-center
+                img(src="/assets/img/yang/top/mid.png")
+            .col-6.col-md-4: .final-right
+        .row.d-md-none
+            img.w-100(src="/assets/img/yang/top/mid.png")
 
-    .container.ingredient.pb-5
-        h1 AAA
+    +ingr_modal("ginger", "薑", "20 × 20 cm")
+    +ingr_modal("komushroom", "杏鮑菇", "15 × 11 cm")
+    +ingr_modal("shrimps", "蝦米", "15 × 11 cm")
+    +ingr_modal("pork", "絞肉", "15 × 11 cm")
+    +ingr_modal("radish", "菜脯絲", "15 × 11 cm")
+    +ingr_modal("beans", "紅豆", "20 × 20 cm")
+    +ingr_modal("peanuts", "花生米", "15 × 11 cm cm")
+    +ingr_modal("mushrooms", "香菇", "15 × 11 cm cm")
+    +ingr_modal("glutinousrice", "糯米粉", "25 × 25 cm")
+    +ingr_modal("sugar", "糖", "15 × 11 cm cm")
+    +ingr_modal("shallot", "紅蔥頭", "15 × 11 cm cm")
+    +ingr_modal("pumpkin", "南瓜", "25 × 25 cm")
+    +ingr_modal("herbal", "艾草", "20 × 20 cm")
+
+    .container.ingredient.py-5
+        .up-row.text-center
+            .ingr-w20
+                +ingr_button("ginger")
+            .ingr-w15
+                +ingr_button("komushroom")
+                +ingr_button("shrimps")
+            .ingr-w15
+                +ingr_button("pork")
+                +ingr_button("radish")
+            .ingr-w20
+                +ingr_button("beans")
+            .ingr-w15
+                +ingr_button("peanuts")
+                +ingr_button("mushrooms")
+        .down-row.text-center
+            .ingr-w25
+                +ingr_button("glutinousrice")
+            .ingr-w15
+                +ingr_button("sugar")
+                +ingr_button("shallot")
+            .ingr-w25
+                +ingr_button("pumpkin")
+            .ingr-w20
+                +ingr_button("herbal")
+
+    mixin recipe_modal(id, name)
+        .modal.info-modal.fade(id="modal-"+id tabindex='-1' aria-hidden='true')
+            .modal-dialog.modal-dialog-centered: .modal-content
+                .modal-header.px-4
+                    button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+                .modal-body.px-4.pt-0
+                    img(src="/assets/img/yang/recipe/"+name+".jpg")
+                    
+    mixin recipe_button(id, name)
+        .col-md-4.my-2: a.recipe-click(href="#" data-bs-toggle="modal" data-bs-target="#modal-"+id): img(src="/assets/img/yang/recipe/"+name+".jpg")
+
+    +recipe_modal("1-1", "1-阿娥01")
+    +recipe_modal("1-2", "1-阿娥02")
+    +recipe_modal("2-1", "2-邱大姐01")
+    +recipe_modal("2-2", "2-邱大姐02")
+    +recipe_modal("3-1", "3-葉媽01")
+    +recipe_modal("3-2", "3-葉媽02")
+
+    a#to-top(href="#" data-aos="fade-up" data-aos-anchor="#recipeCarousel"): i.fas.fa-chevron-up
+    .container.recipe.py-5
+        #recipeCarousel.carousel.slide(data-bs-ride='carousel')
+            .carousel-inner
+                .carousel-item.active: .row
+                    +recipe_button("1-1", "1-阿娥01")
+                    +recipe_button("1-2", "1-阿娥02")
+                    +recipe_button("2-1", "2-邱大姐01")
+                .carousel-item: .row
+                    +recipe_button("2-2", "2-邱大姐02")
+                    +recipe_button("3-1", "3-葉媽01")
+                    +recipe_button("3-2", "3-葉媽02")
+            button.carousel-control-prev(type='button' data-bs-target='#recipeCarousel' data-bs-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.visually-hidden Previous
+            button.carousel-control-next(type='button' data-bs-target='#recipeCarousel' data-bs-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.visually-hidden Next
+        iframe(src='https://www.youtube.com/embed/jHB-iuiNLNc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
