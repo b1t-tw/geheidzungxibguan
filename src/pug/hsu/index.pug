@@ -50,17 +50,17 @@ block body
 
         .container.flex-grow-1: .row.h-100 
             .col-lg-3.h-50.h-lg-100
-                .out-box(data-aos="zoom-in" data-aos-delay="50")
+                .out-box(data-aos="zoom-in" data-aos-delay="50" data-aos-anchor="#header")
                     a.content-1-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-1")
             .col-lg-6.h-100: .row.h-100
                 .col-12.h-50
-                    .out-box(data-aos="zoom-in" data-aos-delay="100")
+                    .out-box(data-aos="zoom-in" data-aos-delay="100" data-aos-anchor="#header")
                         a.content-2-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-2")
                 .col-12.h-50
-                    .out-box(data-aos="zoom-in" data-aos-delay="150")
+                    .out-box(data-aos="zoom-in" data-aos-delay="150" data-aos-anchor="#header")
                         a.content-3-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-3")
             .col-lg-3.h-50.h-lg-100
-                .out-box(data-aos="zoom-in" data-aos-delay="200")
+                .out-box(data-aos="zoom-in" data-aos-delay="200" data-aos-anchor="#header")
                     a.content-4-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-4")
 block script 
     script.
@@ -85,6 +85,6 @@ block script
         });
 
         $(".random-block").sort(() => Math.random() - 0.5).each(function(){
-            $(this).css({"width": `${250+Math.random()*150}px`});
+            $(this).css({"width": `${200+Math.random()*200}px`});
             $("#content-4 .modal-body .container-fluid").append(this);
         });

@@ -66,8 +66,9 @@ block body
     +ingr_modal("shallot", "紅蔥頭", "15 × 11 cm cm")
     +ingr_modal("pumpkin", "南瓜", "25 × 25 cm")
     +ingr_modal("herbal", "艾草", "20 × 20 cm")
-
+    
     .container.ingredient.py-5
+        #bgm.py-4(data-aos="fade-up" data-aos-anchor=".ingredient"): audio(controls controlsList="nodownload" src="/assets/audio/yang/bgm.mp3")
         .up-row.text-center
             .ingr-w20
                 +ingr_button("ginger")
@@ -130,3 +131,9 @@ block body
                 span.carousel-control-next-icon(aria-hidden='true')
                 span.visually-hidden Next
         iframe(src='https://www.youtube.com/embed/jHB-iuiNLNc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+
+block script
+    script.
+        document.addEventListener('aos:in', ({ detail }) => {
+            console.log('animated in', detail);
+        });
