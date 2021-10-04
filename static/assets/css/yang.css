@@ -41,6 +41,10 @@ body {
   background-image: url("/assets/img/yang/top/right.png");
 }
 
+#bgm {
+  max-width: 500px;
+}
+
 .ingredient .ingr-w15, .ingredient .ingr-w20, .ingredient .ingr-w25 {
   display: inline-block;
   vertical-align: middle;
@@ -90,4 +94,24 @@ body {
   height: 40vw;
   left: 10%;
   margin-top: 5%;
+}
+
+@media (max-width: 768px) {
+  .row > * {
+    padding: 1%;
+  }
+
+  .ingredient .ingr-w15 {
+    width: 35%;
+  }
+  .ingredient .ingr-w20 {
+    width: 47%;
+  }
+  .ingredient .ingr-w25 {
+    width: 59%;
+  }
+
+  .recipe iframe {
+    height: 50vh;
+  }
 }

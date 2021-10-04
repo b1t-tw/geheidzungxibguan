@@ -68,8 +68,8 @@ block body
     +ingr_modal("herbal", "艾草", "20 × 20 cm")
     
     .container.ingredient.py-5
-        #bgm.py-4(data-aos="fade-up" data-aos-anchor=".ingredient"): audio(controls controlsList="nodownload" src="/assets/audio/yang/bgm.mp3" autoplay)
-        .up-row.text-center
+        #bgm.py-4(data-aos="fade-up" data-aos-anchor=".ingredient"): audio.w-100(controls controlsList="nodownload" src="/assets/audio/yang/bgm.mp3" autoplay)
+        .text-center
             .ingr-w20
                 +ingr_button("ginger")
             .ingr-w15
@@ -83,7 +83,6 @@ block body
             .ingr-w15
                 +ingr_button("peanuts")
                 +ingr_button("mushrooms")
-        .down-row.text-center
             .ingr-w25
                 +ingr_button("glutinousrice")
             .ingr-w15
