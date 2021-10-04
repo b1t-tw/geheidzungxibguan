@@ -52,18 +52,16 @@ block body
                 a.go-back(href="/main#rooms")
                     img(src="/assets/img/logo_small.png")
 
-        .container.flex-grow-1.px-md-5: .row.h-100 
-            .col-6.col-lg-3.flex-grow-1
+        .container.flex-grow-1.d-flex.px-md-5: .row.flex-grow-1
+            .col-6.col-lg-3.flex-grow-1.d-flex
                 .out-box(data-aos="zoom-in" data-aos-delay="50" data-aos-anchor="#header")
                     a.content-1-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-1")
-            .col-6.flex-grow-1: .row.h-100
-                .col-12.flex-grow-1
-                    .out-box(data-aos="zoom-in" data-aos-delay="100" data-aos-anchor="#header")
-                        a.content-2-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-2")
-                .col-12.flex-grow-1
-                    .out-box(data-aos="zoom-in" data-aos-delay="150" data-aos-anchor="#header")
-                        a.content-3-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-3")
-            .col-lg-3.flex-grow-1
+            .col-6.flex-grow-1.d-flex.flex-column
+                .out-box(data-aos="zoom-in" data-aos-delay="100" data-aos-anchor="#header")
+                    a.content-2-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-2")
+                .out-box(data-aos="zoom-in" data-aos-delay="150" data-aos-anchor="#header")
+                    a.content-3-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-3")
+            .col-lg-3.flex-grow-1.d-flex
                 .out-box(data-aos="zoom-in" data-aos-delay="200" data-aos-anchor="#header")
                     a.content-4-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-4")
 block script 

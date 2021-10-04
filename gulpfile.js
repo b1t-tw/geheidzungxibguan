@@ -31,6 +31,7 @@ function build() {
 
 gulp.task('server', function () {
     connect.server({
+        host: '0.0.0.0',
         port: 3000,
         livereload: true,
         root: 'static'
