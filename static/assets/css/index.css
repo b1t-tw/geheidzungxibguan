@@ -35,7 +35,7 @@ body {
 .main-float-1 {
   transform-origin: 62% 52%;
   background-image: url("/assets/img/main2_float_1.png");
-  animation: rotate 1s ease-in-out infinite alternate;
+  animation: rotate 1s ease-out infinite alternate;
 }
 
 .main-float-3 {
