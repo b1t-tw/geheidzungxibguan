@@ -9,6 +9,16 @@ body {
   line-height: 2.5rem;
 }
 
+a:visited {
+  border: 0;
+  outline: 0;
+}
+
+a[data-bs-toggle=popover] {
+  font-weight: bold;
+  color: black;
+}
+
 p {
   text-align: justify;
 }
@@ -17,20 +27,28 @@ h1, h2, h3, h4 {
   font-weight: bold;
 }
 
-@keyframes arrow-float {
-  0% {
-    bottom: 0.5rem;
-  }
-  100% {
-    bottom: 1rem;
-  }
-}
 @keyframes img-float {
   0% {
     transform: translate(0, 0px);
   }
   100% {
     transform: translate(0, 5px);
+  }
+}
+@keyframes img-float-left {
+  0% {
+    transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(-5px, 0);
+  }
+}
+@keyframes img-float-right {
+  0% {
+    transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(5px, 0);
   }
 }
 #header {
@@ -52,18 +70,31 @@ h1, h2, h3, h4 {
   animation: img-float 1s ease-in-out infinite alternate;
 }
 
-#to-top {
+#to-top, #to-pre, #to-post {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   width: 3rem;
   color: white;
   display: block;
   position: fixed;
-  bottom: 0.5rem;
-  left: calc(50% - 1.5rem);
+  bottom: 0.5em;
   z-index: 999;
-  animation: arrow-float 1s ease-in-out infinite alternate;
   filter: drop-shadow(0px 2px 2px black);
+}
+
+#to-top {
+  left: calc(50% - 1.5rem);
+  animation: img-float 1s ease-in-out infinite alternate;
+}
+
+#to-pre {
+  left: calc(20% - 1.5rem);
+  animation: img-float-left 1s ease-in-out infinite alternate;
+}
+
+#to-post {
+  right: calc(20% - 1.5rem);
+  animation: img-float-right 1s ease-in-out infinite alternate;
 }
 
 .more-info-button {
@@ -87,9 +118,27 @@ h1, h2, h3, h4 {
   height: 50vh;
 }
 
+.player::before {
+  content: " ";
+  height: 2em;
+  width: 2em;
+  margin: 0.5em 0;
+  display: block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.player.pause::before {
+  background-image: url("/assets/img/play_button.png");
+}
+.player.play::before {
+  background-image: url("/assets/img/pause_button.png");
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 /* Track */

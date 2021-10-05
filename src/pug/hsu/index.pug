@@ -2,6 +2,8 @@ extends ../layout.pug
 block variables
     - title = ' - 客話Hak-fa - 轉屋下／許雁婷'
 block head
+    link(rel="prefetch" href="/assets/img/play_button.png")
+    link(rel="prefetch" href="/assets/img/pause_button.png")
     link(rel="stylesheet" href="/assets/css/hsu.css?version="+timestamp)
 block body
     .modal.fade.info-modal#chouModal(tabindex='-1' aria-hidden='true')
@@ -17,24 +19,25 @@ block body
                 h4.py-4 訪談影片
                 iframe(src='https://www.youtube.com/embed/2fTs0LW3oCw' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
 
-    
+
     .modal.fade.works-modal#content-1(tabindex='-1' aria-hidden='true' data-bs-backdrop="static" data-bs-keyboard="false")
         .modal-dialog.modal-fullscreen: .modal-content
             .modal-header.px-4
                 button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
-            .modal-body.px-4.pt-0
+            .modal-body.px-4
                 include ./works/1.pug
     .modal.fade.works-modal#content-2(tabindex='-1' aria-hidden='true' data-bs-backdrop="static" data-bs-keyboard="false")
         .modal-dialog.modal-fullscreen: .modal-content
             .modal-header.px-4
                 button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
-            .modal-body.px-4.pt-0
+            .modal-body.px-4
                 include ./works/2.pug
+            
     .modal.fade.works-modal#content-3(tabindex='-1' aria-hidden='true' data-bs-backdrop="static" data-bs-keyboard="false")
         .modal-dialog.modal-fullscreen: .modal-content
             .modal-header.px-4
                 button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
-            .modal-body.px-4.pt-0
+            .modal-body.px-4
                 include ./works/3.pug
     .modal.fade.works-modal#content-4(tabindex='-1' aria-hidden='true' data-bs-backdrop="static" data-bs-keyboard="false")
         .modal-dialog.modal-fullscreen: .modal-content
@@ -46,24 +49,27 @@ block body
     .d-flex.flex-column.h-100.pb-5
         .container-fluid#header: .row
             .col.order-md-1
-                a.go-back(href="/main#rooms")
+                a.go-back(href="/main/#rooms")
                     img(src="/assets/img/logo_small.png")
             .col-md-8.mt-4.mt-md-2
                 h4 客話Hak-fa - 轉屋下／許雁婷
                     a.more-info-button(role="button" href="#" data-bs-toggle="modal" data-bs-target="#chouModal"): i.far.fa-plus-square
 
-        .container.flex-grow-1.d-flex.px-md-5: .row.flex-grow-1
-            .col-6.col-lg-3.flex-grow-1.d-flex
+        .container.flex-grow-1.d-flex.px-md-5.pb-5: .row.flex-grow-1
+            .col-5.col-lg-3.flex-grow-1.d-flex
                 .out-box(data-aos="zoom-in" data-aos-delay="50" data-aos-anchor="#header")
                     a.content-1-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-1")
-            .col-6.flex-grow-1.d-flex.flex-column
+            .col-7.col-lg-6.flex-grow-1.d-flex.flex-column
                 .out-box(data-aos="zoom-in" data-aos-delay="100" data-aos-anchor="#header")
-                    a.content-2-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-2")
+                    a.content-2-thumb(href="#content-2" data-bs-toggle="modal" data-bs-target="#content-2")
                 .out-box(data-aos="zoom-in" data-aos-delay="150" data-aos-anchor="#header")
-                    a.content-3-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-3")
+                    a.content-3-thumb(href="#content-3" data-bs-toggle="modal" data-bs-target="#content-3")
             .col-lg-3.flex-grow-1.d-flex
                 .out-box(data-aos="zoom-in" data-aos-delay="200" data-aos-anchor="#header")
-                    a.content-4-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-4")
+                    a.content-4-thumb(href="#content-4" data-bs-toggle="modal" data-bs-target="#content-4")
+
+    a#to-pre(href="/chou" data-aos="fade-left" data-aos-anchor="#header"): i.fas.fa-chevron-circle-left
+    a#to-post(href="/yang" data-aos="fade-right" data-aos-anchor="#header"): i.fas.fa-chevron-circle-right
 block script 
     script.
         $(function(){
@@ -81,12 +87,40 @@ block script
             const url = new URL(window.location);
             url.hash = "";
             window.history.replaceState({}, '', url);
-            $("audio").each(function(){
+            $("audio").each(function() {
                 $(this)[0].pause();
             });
+            $(".player").each(function() {
+                $(this).removeClass("play");
+                $(this).addClass("pause");
+            })
         });
 
         $(".random-block").sort(() => Math.random() - 0.5).each(function(){
             $(this).css({"width": `${200+Math.random()*200}px`});
             $("#content-4 .modal-body .container-fluid").append(this);
+        });
+
+        $(".player").on("click", function(e) {
+            e.preventDefault();
+            let audioDom = $($(this).data("audio"))[0];
+            if(audioDom.paused) {
+                audioDom.play();
+                $(this).removeClass("pause");
+                $(this).addClass("play");
+            } else {
+                audioDom.pause();
+                $(this).removeClass("play");
+                $(this).addClass("pause");
+            }
+        });
+
+        $(".arrow-group a").on("click", function(e) {
+            e.preventDefault();
+            let target = $(this).data("target");
+            $("button[data-bs-dismiss='modal']").trigger("click");
+            const url = new URL(window.location);
+            url.hash = target;
+            window.history.replaceState({}, '', url);
+            $(target).modal("show");
         });

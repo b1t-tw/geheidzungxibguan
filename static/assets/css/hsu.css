@@ -7,6 +7,10 @@ audio {
   max-width: 500px;
 }
 
+.btn-close {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .out-box {
   display: flex;
   flex-grow: 1;
@@ -21,6 +25,8 @@ audio {
   border-radius: 3px;
   filter: drop-shadow(-2px 2px 0px black);
   transition: 0.3s;
+  background-color: #8AA19E;
+  border: 1px solid black;
 }
 .out-box a:hover {
   filter: drop-shadow(-5px 5px 2px black) brightness(1.2);
@@ -47,11 +53,23 @@ audio {
 .works-modal .modal-content {
   background-color: #8AA19E;
 }
+.works-modal .modal-body {
+  padding: 5rem 0;
+}
 
 .random-block {
   max-width: 100%;
   display: inline-block;
   padding: 0.5rem;
+}
+
+.arrow-group {
+  position: absolute;
+  right: 10%;
+}
+.arrow-group a {
+  font-size: 2rem;
+  color: black;
 }
 
 @media (min-width: 992px) {

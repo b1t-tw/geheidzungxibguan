@@ -19,11 +19,11 @@ body {
 .final .final-top .final-right {
   background-image: url("/assets/img/yang/thumb/niuwenshui.jpg");
 }
-.final .final-top > div {
+.final .final-top .ingr-click > div {
   filter: drop-shadow(-2px 2px 0px black);
   transition: 0.3s;
 }
-.final .final-top > div:hover {
+.final .final-top .ingr-click > div:hover {
   filter: drop-shadow(-5px 5px 2px black) brightness(1.2);
   transform: translate(5px, -5px);
 }
@@ -33,17 +33,18 @@ body {
 .final .final-bottom .final-center {
   padding-bottom: 50%;
   overflow-y: scroll;
+  text-align: center;
+}
+.final .final-bottom .final-center img.img-title {
+  margin-bottom: 0;
+  width: 70%;
 }
 .final .final-bottom .final-center img {
-  margin-bottom: -100%;
+  margin-bottom: -50%;
   width: 100%;
 }
 .final .final-bottom .final-right {
   background-image: url("/assets/img/yang/top/right.png");
-}
-
-#bgm {
-  max-width: 500px;
 }
 
 .ingredient .ingr-w15, .ingredient .ingr-w20, .ingredient .ingr-w25 {
@@ -102,14 +103,20 @@ body {
     padding: 1%;
   }
 
+  .ingredient {
+    overflow-x: scroll;
+  }
+  .ingredient .text-center {
+    width: 400%;
+  }
   .ingredient .ingr-w15 {
-    width: 35%;
+    width: 8.75%;
   }
   .ingredient .ingr-w20 {
-    width: 47%;
+    width: 11.75%;
   }
   .ingredient .ingr-w25 {
-    width: 59%;
+    width: 14.75%;
   }
 
   .recipe iframe {

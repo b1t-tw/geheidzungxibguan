@@ -80,12 +80,9 @@ body {
   background-image: url("/assets/img/about/永康公園.jpg");
 }
 
-.titles {
-  padding: 2rem;
-  text-align: center;
+.text-title {
   color: white;
-  background-color: rgba(0, 0, 0, 0.8);
-  margin-bottom: 50vh;
+  filter: drop-shadow(2px 2px 2px black);
 }
 
 .info-block, .talk-block {
@@ -123,6 +120,10 @@ body {
 }
 .talk-block-right .avartar {
   background-position: right;
+}
+
+.mb-7 {
+  margin-bottom: 6rem;
 }
 
 .avartar {

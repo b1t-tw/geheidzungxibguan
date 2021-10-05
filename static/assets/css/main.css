@@ -87,6 +87,9 @@
   border-radius: 1rem;
   line-height: 1.2em;
 }
+#footer p {
+  word-break: keep-all;
+}
 #footer p img {
   margin: 2rem;
   width: 16rem;

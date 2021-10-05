@@ -16,7 +16,7 @@ body
             background-image: url("/assets/img/yang/thumb/pumpkinban.jpg")
         .final-right
             background-image: url("/assets/img/yang/thumb/niuwenshui.jpg")
-        & > div
+        .ingr-click > div
             filter: drop-shadow(-2px 2px 0px black)
             transition: .3s
             &:hover
@@ -29,13 +29,15 @@ body
         .final-center
             padding-bottom: 50%
             overflow-y: scroll
+            text-align: center
+            img.img-title
+                margin-bottom: 0
+                width: 70%
             img
-                margin-bottom: -100%
+                margin-bottom: -50%
                 width: 100%
         .final-right
             background-image: url("/assets/img/yang/top/right.png")
-#bgm
-    max-width: 500px
         
 .ingredient
     .ingr-w15, .ingr-w20, .ingr-w25
@@ -83,11 +85,14 @@ body
     .row>*
         padding: 1%
     .ingredient
+        overflow-x: scroll
+        .text-center
+            width: 400%
         .ingr-w15
-            width: 35%
+            width: 8.75%
         .ingr-w20
-            width: 47%
+            width: 11.75%
         .ingr-w25
-            width: 59%
+            width: 14.75%
     .recipe iframe
         height: 50vh

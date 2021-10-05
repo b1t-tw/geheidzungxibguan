@@ -19,12 +19,15 @@ block body
     .d-flex.flex-column.h-100.pb-5
         .container-fluid#header: .row
             .col.order-md-1
-                a.go-back(href="/main#rooms")
+                a.go-back(href="/main/#rooms")
                     img(src="/assets/img/logo_small.png")
-            .col-md-8.mt-4.mt-md-2
+            .col-md-8.mt-5.mt-md-2
                 h4.text-light 就在你身邊／周孟曄
                     a.more-info-button(role="button" href="#" data-bs-toggle="modal" data-bs-target="#chouModal"): i.far.fa-plus-square
 
-        .container-fluid.py-4.h-75: .row.h-100.justify-content-center: .col-md-10.col-xl-8.h-100
+        .container-fluid.pt-2.pb-5.h-75: .row.h-100.justify-content-center: .col-md-10.col-xl-8.h-100
             iframe#yt-video(src='https://www.youtube.com/embed/Fxl9Z7ISCyU' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
 
+
+    a#to-pre(href="/about" data-aos="fade-left" data-aos-anchor="#header"): i.fas.fa-chevron-circle-left
+    a#to-post(href="/hsu" data-aos="fade-right" data-aos-anchor="#header"): i.fas.fa-chevron-circle-right

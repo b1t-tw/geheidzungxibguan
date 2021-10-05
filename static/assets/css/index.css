@@ -51,7 +51,7 @@ body {
 .main-word-1 {
   position: absolute;
   top: 1rem;
-  left: 15%;
+  left: 10%;
   width: 18rem;
   height: 4rem;
   background-image: url("/assets/img/main_word_1.png");

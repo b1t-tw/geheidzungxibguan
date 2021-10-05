@@ -17,10 +17,14 @@ block head
     link(rel="prefetch" href="/assets/img/about/永康公園.jpg")
 block body
     .container-fluid#header: .row
-        .col-8
-        .col
-            a.go-back(href="/main#rooms")
+        .col.order-md-1
+            a.go-back(href="/main/#rooms")
                 img(src="/assets/img/logo_small.png")
+        .col-md-8.mt-5.mt-md-2
+            h4.text-title
+                | 關於城南客家／
+                .d-md-none.p-1
+                | 帶路人洪秉綺 & 曾大哥
     .bg-image-group
         .bg-box(data-aos="zoom-out" data-aos-delay="500" data-aos-duration="500")
             .carousel.slide.carousel-fade.h-100(data-bs-ride="carousel" data-bs-touch="false" data-bs-interval="6000")
@@ -63,9 +67,7 @@ block body
                         .bg-image.image-12
 
     .container.py-4
-        .talk-block.talk-block-left
-            h2 帶路人洪秉綺 & 曾大哥
-        .talk-block.talk-block-left
+        .talk-block.talk-block-left.mb-7
             h3 台北城南
         .talk-block.talk-block-left#bg-1-anchor(data-aos="fade-right")
             .avartar.avartar-iris
@@ -78,7 +80,7 @@ block body
             p 前些日子，去曾大哥店裡閒聊的時候，他跟我說...
     
     .container.py-4
-        .talk-block.talk-block-right(data-aos="fade-left" data-aos-offset="200")
+        .talk-block.talk-block-right.mb-7(data-aos="fade-left" data-aos-offset="200")
             h3 我的朋友
         .talk-block.talk-block-right#bg-3-anchor(data-aos="fade-left" data-aos-offset="200")
             .avartar.avartar-zeng
@@ -92,7 +94,7 @@ block body
         .info-block(data-aos="fade-in" data-aos-offset="200"): p 而戰後（1946~），有另一波的內部遷移，從鄉村移到都市，陸續有許多人從外縣市移居台北討生活，這反映了當時工業興起與農業式微的狀況。另外，1959年的八七風災，也讓很多受災戶決定離鄉北上找尋出路。那段時間不少人沒得能負擔在市中心居住，政府也無力安置，所以各自在城市的邊陲地帶自行搭建棚樓棲居。
 
     .container.py-4
-        .talk-block.talk-block-right(data-aos="fade-left" data-aos-offset="200")
+        .talk-block.talk-block-right.mb-7(data-aos="fade-left" data-aos-offset="200")
             h3 台北是我的家 v.s. 台北不是我的家
         .talk-block.talk-block-right(data-aos="fade-left" data-aos-offset="200")
             .avartar.avartar-zeng
@@ -101,7 +103,7 @@ block body
             p 然後，我在這裡結了婚有了小孩，生活重心都在這，一年總是會回去老家幾次，但都沒法停留太久，孩子小時候寒暑假會送到南部，讓他們跟我爸媽住一段時間，在鄉下玩也很自在，也可以學學客語。只是說因為現在生活圈的關係，客家經驗對我來說早已越來越模糊，對我們家兩個小的也是一樣。學校課業和未來的工作還是比較要緊，總之他們的想法比較重要啦！
 
     .container.py-4
-        .talk-block.talk-block-left(data-aos="fade-right")
+        .talk-block.talk-block-left.mb-7(data-aos="fade-right")
             h3 破碎的文化
         .talk-block.talk-block-left(data-aos="fade-right")
             .avartar.avartar-iris
@@ -112,6 +114,7 @@ block body
 
     .container-fluid.py-5.info-box#src: .container
         a#to-top(href="#" data-aos="fade-up" data-aos-anchor="#src"): i.fas.fa-chevron-up
+        a#to-post(href="/chou" data-aos="fade-right" data-aos-anchor="#src"): i.fas.fa-chevron-circle-right
         h3.my-5 參考資料：   
         p 1. 丘昌泰（2011），〈臺灣客家的過去與現在〉，《臺北市終身學習網通訊57期》，頁 2-12
         p 2. 財團法人台北市客家文化基金會研究員許瑞君，〈109年度台北市客家人口調查-客家里資訊分析比對〉             
