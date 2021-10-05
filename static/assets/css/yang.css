@@ -31,6 +31,7 @@ body {
   background-image: url("/assets/img/yang/top/left.png");
 }
 .final .final-bottom .final-center {
+  padding-bottom: 50%;
   overflow-y: scroll;
 }
 .final .final-bottom .final-center img {

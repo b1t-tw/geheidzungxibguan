@@ -3,7 +3,7 @@ body {
   background-color: black;
 }
 
-iframe {
+#player {
   width: 100%;
   height: 100%;
 }

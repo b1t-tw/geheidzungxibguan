@@ -7,7 +7,7 @@ block body
     .modal.info-modal.fade#chouModal(tabindex='-1' aria-hidden='true')
         .modal-dialog.modal-dialog-centered.modal-lg: .modal-content
             .modal-header.px-4
-                h3.modal-title 在你身邊／周孟曄
+                h3.modal-title 就在你身邊／周孟曄
                 button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
             .modal-body.px-4.pt-0
                 h4.py-4 藝術家介紹
@@ -18,13 +18,13 @@ block body
                 iframe(src='https://www.youtube.com/embed/ADfhDxUrM48' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
     .d-flex.flex-column.h-100.pb-5
         .container-fluid#header: .row
-            .col-8
-                h4.text-light 在你身邊／周孟曄
-                    a.more-info-button(role="button" href="#" data-bs-toggle="modal" data-bs-target="#chouModal"): i.far.fa-plus-square
-            .col
+            .col.order-md-1
                 a.go-back(href="/main#rooms")
                     img(src="/assets/img/logo_small.png")
+            .col-md-8.mt-4.mt-md-2
+                h4.text-light 就在你身邊／周孟曄
+                    a.more-info-button(role="button" href="#" data-bs-toggle="modal" data-bs-target="#chouModal"): i.far.fa-plus-square
 
-        .container-fluid.py-4.h-75: .row.h-100.justify-content-center: .col-md-8.col-xl-6.h-100
+        .container-fluid.py-4.h-75: .row.h-100.justify-content-center: .col-md-10.col-xl-8.h-100
             iframe#yt-video(src='https://www.youtube.com/embed/Fxl9Z7ISCyU' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
 

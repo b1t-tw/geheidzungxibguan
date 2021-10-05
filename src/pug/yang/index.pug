@@ -1,21 +1,23 @@
 extends ../layout.pug
 block variables
-    - title = ' - 今晡日炊粄仔／楊志雅'
+    - title = ' - 今晡日做粄仔／楊志雅'
 block head
     link(rel="stylesheet" href="/assets/css/yang.css?version="+timestamp)
 block body
     mixin ingr_modal(name, title, size)
         .modal.info-modal.fade(id=name+"Modal" tabindex='-1' aria-hidden='true')
-            .modal-dialog.modal-dialog-centered: .modal-content
+            .modal-dialog.modal-lg.modal-dialog-centered: .modal-content
                 .modal-header.px-4
                     button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
                 .modal-body.px-4.pt-0
                     img(src="/assets/img/yang/thumb/"+name+".jpg")
                     h4= title
                     p
-                        | 膠彩   Eastern Gouache
+                        | 膠彩
                         br
-                        =size+", 2021"
+                        =size
+                        br
+                        | 2021
 
     mixin ingr_button(name)
         a.ingr-click(href="#" data-bs-toggle="modal" data-bs-target="#"+name+"Modal"): img(src="/assets/img/yang/thumb/"+name+".jpg")
@@ -23,7 +25,7 @@ block body
     .modal.info-modal.fade#chouModal(tabindex='-1' aria-hidden='true')
         .modal-dialog.modal-dialog-centered.modal-lg: .modal-content
             .modal-header.px-4
-                h3.modal-title 今晡日炊粄仔／楊志雅
+                h3.modal-title 今晡日做粄仔／楊志雅
                 button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
             .modal-body.px-4.pt-0
                 h4.py-4 藝術家介紹
@@ -32,12 +34,12 @@ block body
                 p 計畫實際訪問調查城南地區客家長輩各式「粄」的製作方法，圍桌製食之際蒐集客家族群對於米食點心的記憶，同時側記客家族群遷入城南地區之不同路徑，與之連動的社交關係。創作者從後生的角度觀察記錄隱入生活當中的飲食習慣，透過東方媒材繪畫方法繪製成食譜，再以分享食材包的藝術互動方式，散播客家味緒，讓更多人得以用簡單入門的方法，在家試做客家點心！
                 h4.py-4 訪談影片
     .container-fluid.pb-5#header: .row
-        .col-8
-            h4 今晡日炊粄仔／楊志雅
-                a.more-info-button(role="button" href="#" data-bs-toggle="modal" data-bs-target="#chouModal"): i.far.fa-plus-square
-        .col
+        .col.order-md-1
             a.go-back(href="/main#rooms")
                 img(src="/assets/img/logo_small.png")
+        .col-md-8.mt-4.mt-md-2
+            h4 今晡日做粄仔／楊志雅
+                a.more-info-button(role="button" href="#" data-bs-toggle="modal" data-bs-target="#chouModal"): i.far.fa-plus-square
     
     +ingr_modal("aicaoban", "艾粄", "25 × 25 cm")
     +ingr_modal("pumpkinban", "南瓜粄", "25 × 25 cm")
@@ -49,10 +51,10 @@ block body
             .col-4: a.ingr-click(href="#" data-bs-toggle="modal" data-bs-target="#pumpkinbanModal"): .final-center
             .col-4: a.ingr-click(href="#" data-bs-toggle="modal" data-bs-target="#niuwenshuiModal"): .final-right
         .row.final-bottom
-            .col-6.col-md-4: .final-left
-            .d-none.d-md-block.col-4: .final-center
+            .col-6.col-md-3: .final-left
+            .d-none.d-md-block.col-6: .final-center
                 img(src="/assets/img/yang/top/mid.png")
-            .col-6.col-md-4: .final-right
+            .col-6.col-md-3: .final-right
         .row.d-md-none
             img.w-100(src="/assets/img/yang/top/mid.png")
 
@@ -62,11 +64,11 @@ block body
     +ingr_modal("pork", "絞肉", "15 × 11 cm")
     +ingr_modal("radish", "菜脯絲", "15 × 11 cm")
     +ingr_modal("beans", "紅豆", "20 × 20 cm")
-    +ingr_modal("peanuts", "花生米", "15 × 11 cm cm")
-    +ingr_modal("mushrooms", "香菇", "15 × 11 cm cm")
+    +ingr_modal("peanuts", "花生米", "15 × 11 cm")
+    +ingr_modal("mushrooms", "香菇", "15 × 11 cm")
     +ingr_modal("glutinousrice", "糯米粉", "25 × 25 cm")
-    +ingr_modal("sugar", "糖", "15 × 11 cm cm")
-    +ingr_modal("shallot", "紅蔥頭", "15 × 11 cm cm")
+    +ingr_modal("sugar", "糖", "15 × 11 cm")
+    +ingr_modal("shallot", "紅蔥頭", "15 × 11 cm")
     +ingr_modal("pumpkin", "南瓜", "25 × 25 cm")
     +ingr_modal("herbal", "艾草", "20 × 20 cm")
     
@@ -98,7 +100,7 @@ block body
 
     mixin recipe_modal(id, name)
         .modal.info-modal.fade(id="modal-"+id tabindex='-1' aria-hidden='true')
-            .modal-dialog.modal-dialog-centered: .modal-content
+            .modal-dialog.modal-lg.modal-dialog-centered: .modal-content
                 .modal-header.px-4
                     button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
                 .modal-body.px-4.pt-0

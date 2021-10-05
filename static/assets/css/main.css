@@ -61,7 +61,7 @@
   background-image: url("/assets/img/chou_thumb.jpg");
 }
 #rooms .room-chou::after {
-  content: "在你身邊／周孟曄";
+  content: "就在你身邊／周孟曄";
 }
 #rooms .room-hsu {
   background-image: url("/assets/img/hsu_thumb.jpg");
@@ -78,14 +78,18 @@
 #rooms .room-more {
   background-image: url("/assets/img/more_thumb.jpg");
 }
+#rooms .room-more::after {
+  content: "還有更多～";
+}
 
 #footer {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
+  line-height: 1.2em;
 }
 #footer p img {
   margin: 2rem;
-  width: 20rem;
+  width: 16rem;
 }
 
 @media (max-width: 768px) {

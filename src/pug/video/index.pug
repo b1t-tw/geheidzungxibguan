@@ -2,8 +2,29 @@ extends ../layout.pug
 block variables
     - title = ' - 還有更多～'
 block head
-    link(rel="stylesheet", href="/assets/css/video.css?version="+timestamp)
+    link(rel="stylesheet" href="/assets/css/video.css?version="+timestamp)
 block body
     .container-fluid.h-100
-        iframe(src='https://www.youtube.com/embed/pW3Jjzw9hgE?autoplay=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+        #player
         a#to-main(href="/main"): img(src="/assets/img/arrow.png")
+block script 
+    script.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                videoId: 'pW3Jjzw9hgE',
+                playerVars: {
+                    'playsinline': 1
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                }
+            });
+        }
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
