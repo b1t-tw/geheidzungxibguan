@@ -1,0 +1,165 @@
+@charset "UTF-8";
+body {
+  overflow: overlay;
+}
+
+.container {
+  overflow: hidden;
+  position: relative;
+}
+
+.bg-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.bg-image-group {
+  pointer-events: none;
+}
+
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-1 {
+  background-image: url("/assets/img/about/永康街.jpg");
+}
+
+.image-2 {
+  background-image: url("/assets/img/about/公館2.jpg");
+}
+
+.image-3 {
+  background-image: url("/assets/img/about/台北植物園.jpg");
+}
+
+.image-4 {
+  background-image: url("/assets/img/about/台北市街圖1927.jpg");
+}
+
+.image-5 {
+  background-image: url("/assets/img/about/台北市街圖1932.jpg");
+}
+
+.image-6 {
+  background-image: url("/assets/img/about/東門市場1.jpg");
+}
+
+.image-7 {
+  background-image: url("/assets/img/about/南昌街.jpg");
+}
+
+.image-8 {
+  background-image: url("/assets/img/about/台大.jpg");
+}
+
+.image-9 {
+  background-image: url("/assets/img/about/羅斯福路.jpg");
+}
+
+.image-10 {
+  background-image: url("/assets/img/about/寶藏巖.jpg");
+}
+
+.image-11 {
+  background-image: url("/assets/img/about/永康街1.jpg");
+}
+
+.image-12 {
+  background-image: url("/assets/img/about/永康公園.jpg");
+}
+
+.text-title {
+  color: white;
+  filter: drop-shadow(2px 2px 2px black);
+}
+
+.info-block, .talk-block {
+  padding: 2rem;
+  border-radius: 1rem;
+  display: block;
+}
+.info-block p, .talk-block p {
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+.info-block {
+  margin-bottom: 3rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.talk-block {
+  color: white;
+  width: 60%;
+  position: relative;
+  margin-bottom: 10rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.talk-block-left {
+  left: 0;
+}
+.talk-block-left .avartar {
+  background-position: left;
+}
+
+.talk-block-right {
+  left: 40%;
+}
+.talk-block-right .avartar {
+  background-position: right;
+}
+
+.mb-7 {
+  margin-bottom: 6rem;
+}
+
+.avartar {
+  width: 100%;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+}
+
+.avartar-iris {
+  background-image: url("/assets/img/iris_thumb.jpg");
+}
+
+.avartar-zeng {
+  background-image: url("/assets/img/zeng_thumb.jpg");
+}
+
+.info-box {
+  background-color: #eddda2;
+  margin-bottom: 10rem;
+}
+.info-box a {
+  word-break: break-all;
+}
+
+@media (max-width: 768px) {
+  .info-block, .talk-block {
+    padding: 1rem;
+  }
+
+  .talk-block {
+    width: 90%;
+  }
+
+  .talk-block-right {
+    left: 10%;
+  }
+}

@@ -1,0 +1,114 @@
+@charset "UTF-8";
+#home img {
+  position: relative;
+  left: 55%;
+}
+#home .head-1 {
+  width: 30%;
+  margin-right: 5%;
+}
+#home .head-2 {
+  filter: drop-shadow(2px 2px 1px black);
+  width: 10%;
+}
+
+#main-disc {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+#main-disc p {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+#rooms .room-block {
+  height: 0;
+  position: relative;
+  padding-top: 60%;
+  background-color: tomato;
+  border: 1px solid black;
+  border-radius: 5px;
+  filter: drop-shadow(-2px 2px 0px black);
+  background-position: center;
+  background-size: cover;
+  transition: 0.3s;
+  margin-bottom: 1rem;
+}
+#rooms .room-block:hover {
+  background-color: dodgerblue;
+  filter: drop-shadow(-5px 5px 2px black) brightness(1.2);
+  transform: translate(5px, -5px);
+}
+#rooms .room-block::after {
+  color: black;
+  position: absolute;
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 2em;
+  line-height: 2em;
+  left: 0;
+  top: calc(50% - 1em);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#rooms .room-about {
+  background-image: url("/assets/img/about_thumb.jpg");
+}
+#rooms .room-about::after {
+  content: "關於城南客家";
+}
+#rooms .room-chou {
+  background-image: url("/assets/img/chou_thumb.jpg");
+}
+#rooms .room-chou::after {
+  content: "就在你身邊／周孟曄";
+}
+#rooms .room-hsu {
+  background-image: url("/assets/img/hsu_thumb.jpg");
+}
+#rooms .room-hsu::after {
+  content: "客話Hak-fa - 轉屋下／許雁婷";
+}
+#rooms .room-yang {
+  background-image: url("/assets/img/yang_thumb.jpg");
+}
+#rooms .room-yang::after {
+  content: "今晡日做粄仔／楊志雅";
+}
+#rooms .room-more {
+  background-image: url("/assets/img/more_thumb.jpg");
+}
+#rooms .room-more::after {
+  content: "還有更多～";
+}
+
+#footer {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  line-height: 1.2em;
+}
+#footer p {
+  word-break: keep-all;
+}
+#footer p img {
+  margin: 2rem;
+  width: 16rem;
+}
+
+@media (max-width: 768px) {
+  #home img {
+    position: relative;
+    left: 0;
+  }
+  #home .head-1 {
+    width: 65%;
+    margin-right: 10%;
+  }
+  #home .head-2 {
+    width: 25%;
+  }
+
+  #footer p img {
+    width: 80%;
+  }
+}
