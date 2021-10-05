@@ -17,6 +17,11 @@ h1, h2, h3, h4
         bottom: .5rem
     100%
         bottom: 1rem
+@keyframes img-float
+    0%
+        transform: translate(0, 0px)
+    100%
+        transform: translate(0, 5px)
 
 #header
     padding: 1rem 2rem
@@ -31,6 +36,7 @@ h1, h2, h3, h4
         img
             max-width: 100px
             width: 100%
+            animation: img-float 1s ease-in-out infinite alternate
 
 #to-top
     text-align: center

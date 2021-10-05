@@ -73,7 +73,7 @@
   background-image: url("/assets/img/yang_thumb.jpg");
 }
 #rooms .room-yang::after {
-  content: "今晡日炊粄仔／楊志雅";
+  content: "今晡日做粄仔／楊志雅";
 }
 #rooms .room-more {
   background-image: url("/assets/img/more_thumb.jpg");
