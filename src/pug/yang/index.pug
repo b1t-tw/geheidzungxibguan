@@ -20,7 +20,7 @@ block body
                         | 2021
 
     mixin ingr_button(name)
-        a.ingr-click(href="#" data-bs-toggle="modal" data-bs-target="#"+name+"Modal"): img(src="/assets/img/yang/thumb/"+name+".jpg")
+        a.ingr-click(href="#" data-bs-toggle="modal" data-bs-target="#"+name+"Modal" data-aos="zoom-in"): img(src="/assets/img/yang/thumb/"+name+".jpg")
 
     .modal.info-modal.fade#chouModal(tabindex='-1' aria-hidden='true')
         .modal-dialog.modal-dialog-centered.modal-lg: .modal-content
