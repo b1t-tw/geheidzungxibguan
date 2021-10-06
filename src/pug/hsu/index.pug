@@ -96,9 +96,12 @@ block script
             })
         });
 
-        $(".random-block").sort(() => Math.random() - 0.5).each(function(){
-            $(this).css({"width": `${200+Math.random()*200}px`});
-            $("#content-4 .modal-body .container-fluid").append(this);
+        $("#random-box .player-box").sort(() => Math.random() - 0.5).each(function(){
+            $(this).css({
+                "width": `${20+Math.random()*30}%`,
+                "transform": `scale(${1+Math.random()}) translate(${Math.random()*20 - 10}px, ${Math.random()*20 - 10}px)`,
+            });
+            $("#random-box").append(this);
         });
 
         $(".player").on("click", function(e) {

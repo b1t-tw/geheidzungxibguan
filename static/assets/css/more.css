@@ -1,3 +1,18 @@
+body::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/img/more_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+
 .btn-outline-dark {
   border-width: 2px;
   border-radius: 10rem;

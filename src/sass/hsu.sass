@@ -41,12 +41,18 @@ audio
         background-color: #8AA19E
     .modal-body
         padding: 5rem 0
-
-.random-block
-    max-width: 100%
-    display: inline-block
-    padding: .5rem
-
+        overflow-x: hidden
+#random-box
+    .player-box
+        display: inline-block
+        height: 15%
+        pointer-events: none
+    .player
+        display: inline-block
+        pointer-events: all
+    .arrow-group
+        bottom: 1rem
+        padding-right: 2rem
 .arrow-group
     position: absolute
     right: 10%

@@ -55,12 +55,21 @@ audio {
 }
 .works-modal .modal-body {
   padding: 5rem 0;
+  overflow-x: hidden;
 }
 
-.random-block {
-  max-width: 100%;
+#random-box .player-box {
   display: inline-block;
-  padding: 0.5rem;
+  height: 15%;
+  pointer-events: none;
+}
+#random-box .player {
+  display: inline-block;
+  pointer-events: all;
+}
+#random-box .arrow-group {
+  bottom: 1rem;
+  padding-right: 2rem;
 }
 
 .arrow-group {
