@@ -2,6 +2,15 @@ block variables
 doctype
 html(lang="zh-Hant-TW")
     head
+        //  Global site tag (gtag.js) - Google Analytics 
+        script(async src='https://www.googletagmanager.com/gtag/js?id=G-7EWESY2NR5')
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+        
+            gtag('config', 'G-7EWESY2NR5');
+  
         title 那是種習慣#{title}
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
