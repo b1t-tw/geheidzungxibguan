@@ -70,6 +70,11 @@ audio {
 #random-box .arrow-group {
   bottom: 1rem;
 }
+#random-box #random-btn {
+  position: absolute;
+  left: 10%;
+  bottom: 1rem;
+}
 
 .arrow-group {
   position: absolute;
