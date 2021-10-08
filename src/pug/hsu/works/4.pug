@@ -22,5 +22,6 @@
         .player-box: a.player.pause(href="#" data-audio="#audio-4-10")
         audio#audio-4-11(src="/assets/audio/hsu/4/4-11.aac")
         .player-box: a.player.pause(href="#" data-audio="#audio-4-11")
-        .arrow-group
+        .arrow-group.d-flex
             a(href="#" data-target="#content-3"): i.fas.fa-chevron-circle-left
+            button.btn.btn-dark.ms-4(onclick="run_random()"): i.fas.fa-random

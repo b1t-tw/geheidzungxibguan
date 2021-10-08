@@ -77,7 +77,18 @@ block script
                 var hash = window.location.hash;
                 $(hash).modal('toggle');
             }
+            run_random();
         });
+
+        function run_random() {
+            $("#random-box .player-box").sort(() => Math.random() - 0.5).each(function(){
+                $(this).css({
+                    "width": `${20+Math.random()*30}%`,
+                    "transform": `scale(${1+Math.random()}) translate(${Math.random()*20 - 10}px, ${Math.random()*20 - 10}px)`,
+                });
+                $("#random-box").append(this);
+            });
+        }
         $(".out-box a[data-bs-toggle='modal']").on("click", function(e) {
             const url = new URL(window.location);
             url.hash = $(this).data("bs-target");
@@ -94,14 +105,6 @@ block script
                 $(this).removeClass("play");
                 $(this).addClass("pause");
             })
-        });
-
-        $("#random-box .player-box").sort(() => Math.random() - 0.5).each(function(){
-            $(this).css({
-                "width": `${20+Math.random()*30}%`,
-                "transform": `scale(${1+Math.random()}) translate(${Math.random()*20 - 10}px, ${Math.random()*20 - 10}px)`,
-            });
-            $("#random-box").append(this);
         });
 
         $(".player").on("click", function(e) {
