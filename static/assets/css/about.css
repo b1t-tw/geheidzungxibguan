@@ -91,7 +91,7 @@ body {
   display: block;
 }
 .info-block p, .talk-block p {
-  text-align: justify;
+  word-break: break-word;
   margin-bottom: 0;
 }
 

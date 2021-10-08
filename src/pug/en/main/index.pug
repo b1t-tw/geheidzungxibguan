@@ -1,0 +1,58 @@
+extends ../layout.pug
+block variables
+block head
+    link(rel="stylesheet", href="/assets/css/main.css?version="+timestamp)
+block body
+    a#to-top(href="#" data-aos="fade-up" data-aos-anchor="#footer"): i.fas.fa-chevron-up
+    .modal.info-modal.fade#irisModal(tabindex='-1' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered.modal-lg: .modal-content
+            .modal-header.px-4
+                h3.modal-title Iris, Ping-Chi HUNG
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body.px-4.pt-0
+                p HUNG is an independent curator and a professional art coordinator. Currently chairman of Taiwan Art Space Alliance, she has previously been managing director of Bamboo Curtain Studio; and manager of Taipei Brick. She received her MA in Culture Industry from Goldsmiths, University of London, focusing on the role of pop-up culture in gentrified areas. Currently, her practice works on exploring the supporting system in art and culture fields, the collaboration in cross-disciplined fields, international exchange and local connection. She believes the impactful future can be created by connecting diverse people and organizations.
+
+    .container.py-5
+        a#home.d-block(href="/video")
+            img.head-1(src="/assets/img/main_word_1.png")
+            img.head-2(src="/assets/img/logo_small.png")
+        .text-end.pt-5.pe-2
+            a.btn.btn-outline-dark(href="/main") 中文
+        #main-disc.p-4.p-md-5.my-5(data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000")
+            p (in)habit
+            p Habits can be seen as the intuitive responses of the body. These responses stem from the unwitting behaviors that accumulate in one’s daily life. Over time, the body starts to have its own memories and gradually internalizes these behaviors. When a behavior becomes an inadvertent natural gesture, we no longer pay attention to its details.
+            p But such behaviors do not grow without context.
+            p If we observe closely we notice that the individuals in a community tend to share similar habits. These habits, moreover, carry the life memories of each family. It is like cooking. Oil, sugar, and salt - how much of each of these should be added? A certain and correct proportion can be obtained only with the passing of time. That is a flavor of your own, and it is the taste of home. As we gather the stories of these behaviors, the images of people and the cultural context of a community become more and more clear. Through observing and describing habits, we expand our identity as well as the sense of a community. 
+            p In the project (in)habit, three artists, CHOU Meng-Ye, HSU Yenting, and YANG Chih-Ya, are invited to start from their own somatic experience, observing the Hakka people who linger around the southern part of the Taipei city through their posture, language and diet. The artists discover the unwitting habits of Hakka people in daily life, capturing their lives through gesture, motion, and habit. Through this project, we put aside the stereotypes, and fill the vessel of identity with stories that are “human.” The audience is invited to turn their sight back to their surroundings, and pay attention to the strength of “habits.”
+            p.pt-4.text-end Curator／Iris, Ping-Chi HUNG
+                a.more-info-button(role="button" href="#" data-bs-toggle="modal" data-bs-target="#irisModal"): i.far.fa-plus-square
+        hr
+        #rooms.container.py-5.px-4
+            .row.align-items-center.justify-content-center.py-2
+                .col-md-6(data-aos="zoom-in" data-aos-delay="50" data-aos-offset="200")
+                    a(href="/en/about"): .room-block.room-about.en
+                .col-md-6(data-aos="zoom-in" data-aos-delay="100" data-aos-offset="200")
+                    a(href="/en/chou"): .room-block.room-chou.en
+                .col-md-6(data-aos="zoom-in" data-aos-delay="150" data-aos-offset="200")
+                    a(href="/en/hsu"): .room-block.room-hsu.en
+                .col-md-6(data-aos="zoom-in" data-aos-delay="150")
+                    a(href="/en/yang"): .room-block.room-yang.en
+        hr
+        #footer.p-4.p-md-5.my-5(data-aos="fade-in" data-aos-duration="1000")
+            p (in)habit
+            p ge he idˋ zungˋ xib guan （Hakka pronunciation） 
+            br
+            p Curator：HUNG Ping-Chi (Iris)
+            p Participating Artists：CHOU Meng-Yeh , HSU Yen-Ting, YANG Chih-Ya (Sylvia)
+            p Assistant：HSU Szu-Ting
+            p Graphic Designer：HONG Tze-Ning
+            p Translator：CHEN I-Yen
+            p Website designer：GAU Rehn-Shiarng
+            p Production：BlackBird Imagine Studio
+            p Workshop Video editor：HSU Yu- Jen
+            br
+            p.text-start Supervisor
+                img(src="/assets/img/logo_客委會.png" style="width: 14rem")
+            p.text-start Organizer
+                img(src="/assets/img/logo_客基會.png")
+            br

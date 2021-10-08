@@ -1,0 +1,33 @@
+extends ../layout.pug
+block variables
+    - title = ' - By your side／CHOU Meng-Yeh'
+block head
+    link(rel="stylesheet", href="/assets/css/chou.css?version="+timestamp)
+block body
+    .modal.info-modal.fade#chouModal(tabindex='-1' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered.modal-lg: .modal-content
+            .modal-header.px-4
+                h3.modal-title By your side／CHOU Meng-Yeh
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body.px-4.pt-0
+                h4.py-4 About the Artist
+                p After graduating from the Dept. of Anthropology at National Taiwan University, Meng Yeh Chou went to France for a study tour and found coincidently the art world. She finished her study from Ecole des Beaux-Arts de Nantes and Université de Paris 8, and has been back to Taiwan in 2004, and till now she lives as a full-time artist. She has been continuously holding solo exhibitions, participating various types of group exhibitions and accumulating the experience of artist in residency and workshops. Her works are related with difficulty and complex relationships of human beings, using paper and fiber as materials, and often present as site-specific installations. She expected herself to continue to create till the end of life.
+                h4.py-4 About the Work
+                p In our everyday life, we use postures to express our demands, intentions, expectations, emotions, and more. However, once the teleonomy in a posture is removed, what remains? While looking at the poses of these bodies, familiar or unfamiliar, what sort of association occurs to us? What kind of memory does it evoke? In the video work, various human profiles and postures appear within a surreal scene of Cheng-Nan. It attempts to show how Hakka people strived to adapt to the external changes, as well as the bilateral influences between humans and the environment.
+                h4.py-4 Interview
+                iframe(src='https://www.youtube.com/embed/ql1siKDQiv4' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+    .d-flex.flex-column.h-100.pb-5
+        .container-fluid#header: .row
+            .col.order-md-1
+                a.go-back(href="/en/main/#rooms")
+                    img(src="/assets/img/logo_small.png")
+            .col-md-8.mt-5.mt-md-2
+                h4.text-light By your side／CHOU Meng-Yeh
+                    a.more-info-button(role="button" href="#" data-bs-toggle="modal" data-bs-target="#chouModal"): i.far.fa-plus-square
+
+        .container-fluid.pt-2.pb-5.h-75: .row.h-100.justify-content-center: .col-md-10.col-xl-8.h-100
+            iframe#yt-video(src='https://www.youtube.com/embed/Fxl9Z7ISCyU' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+
+
+    a#to-pre(href="/en/about" data-aos="fade-left" data-aos-anchor="#header"): i.fas.fa-chevron-circle-left
+    a#to-post(href="/en/hsu" data-aos="fade-right" data-aos-anchor="#header"): i.fas.fa-chevron-circle-right

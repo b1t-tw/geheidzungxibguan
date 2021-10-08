@@ -1,0 +1,132 @@
+extends ../layout.pug
+block variables
+    - title = ' - Hak-fa – Returning Home／HSU Yen-Ting'
+block head
+    link(rel="prefetch" href="/assets/img/play_button.png")
+    link(rel="prefetch" href="/assets/img/pause_button.png")
+    link(rel="stylesheet" href="/assets/css/hsu.css?version="+timestamp)
+block body
+    .modal.fade.info-modal#chouModal(tabindex='-1' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered.modal-lg: .modal-content
+            .modal-header.px-4
+                h3.modal-title Hak-fa – Returning Home／HSU Yen-Ting
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body.px-4.pt-0
+                h4.py-4 About the Artist
+                p She investigates the cultural context and texture of sounds, her works often reflect the relationship between sounds, environment, individual/collective memories and the surrounding world from an alternative angle. Using field recordings as her primary source material with electronic sounds and objects, Hsu’s exploration contemplates between documentary, narrative and imaginary elements of recorded sounds under the form of audio documentaries, soundscapes, installations, electroacoustic music and performances. She also collaborates with dance theaters and films as a sound designer/composer.
+                h4.py-4 About the Work
+                p Every language contains a way of thinking, spirit and identity. With time, languages continue to change as they are used and as they interact with other cultures. The meaning of a mother tongue is thus transformed in every life and family. With the stories of three Hakka families, Hak-fa – Returning Home allows us to listen in on the various statuses of Hakka as the mother tongue in different generations, as well as the life experience, emotions and values carried by the language. From their stories, we hear Hakka, yet not only Hakka. Taking it as a prologue, we can all then connect and return to our own experience with our own mother tongue, with our own homes, and contemplate our own journey through language. What is your mother tongue?
+                h4.py-4 Interview
+                iframe(src='https://www.youtube.com/embed/jFy3vEoGYc8' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+
+
+    .modal.fade.works-modal#content-1(tabindex='-1' aria-hidden='true' data-bs-backdrop="static" data-bs-keyboard="false")
+        .modal-dialog.modal-fullscreen: .modal-content
+            .modal-header.px-4
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body.px-4
+                include ./works/1.pug
+    .modal.fade.works-modal#content-2(tabindex='-1' aria-hidden='true' data-bs-backdrop="static" data-bs-keyboard="false")
+        .modal-dialog.modal-fullscreen: .modal-content
+            .modal-header.px-4
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body.px-4
+                include ./works/2.pug
+            
+    .modal.fade.works-modal#content-3(tabindex='-1' aria-hidden='true' data-bs-backdrop="static" data-bs-keyboard="false")
+        .modal-dialog.modal-fullscreen: .modal-content
+            .modal-header.px-4
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body.px-4
+                include ./works/3.pug
+    .modal.fade.works-modal#content-4(tabindex='-1' aria-hidden='true' data-bs-backdrop="static" data-bs-keyboard="false")
+        .modal-dialog.modal-fullscreen: .modal-content
+            .modal-header.px-4
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body.px-4.d-flex.align-items-center
+                include ./works/4.pug
+
+    .d-flex.flex-column.h-100.pb-5
+        .container-fluid#header: .row
+            .col.order-md-1
+                a.go-back(href="/en/main/#rooms")
+                    img(src="/assets/img/logo_small.png")
+            .col-md-8.mt-4.mt-md-2
+                h4 Hak-fa – Returning Home／HSU Yen-Ting
+                    a.more-info-button(role="button" href="#" data-bs-toggle="modal" data-bs-target="#chouModal"): i.far.fa-plus-square
+
+        .container.flex-grow-1.d-flex.px-md-5.pb-5: .row.flex-grow-1
+            .col-5.col-lg-3.flex-grow-1.d-flex
+                .out-box(data-aos="zoom-in" data-aos-delay="50" data-aos-anchor="#header")
+                    a.content-1-thumb(href="#content-1" data-bs-toggle="modal" data-bs-target="#content-1")
+            .col-7.col-lg-6.flex-grow-1.d-flex.flex-column
+                .out-box(data-aos="zoom-in" data-aos-delay="100" data-aos-anchor="#header")
+                    a.content-2-thumb(href="#content-2" data-bs-toggle="modal" data-bs-target="#content-2")
+                .out-box(data-aos="zoom-in" data-aos-delay="150" data-aos-anchor="#header")
+                    a.content-3-thumb(href="#content-3" data-bs-toggle="modal" data-bs-target="#content-3")
+            .col-lg-3.flex-grow-1.d-flex
+                .out-box(data-aos="zoom-in" data-aos-delay="200" data-aos-anchor="#header")
+                    a.content-4-thumb(href="#content-4" data-bs-toggle="modal" data-bs-target="#content-4")
+
+    a#to-pre(href="/en/chou" data-aos="fade-left" data-aos-anchor="#header"): i.fas.fa-chevron-circle-left
+    a#to-post(href="/en/yang" data-aos="fade-right" data-aos-anchor="#header"): i.fas.fa-chevron-circle-right
+block script 
+    script.
+        $(function(){
+            if(window.location.hash) {
+                var hash = window.location.hash;
+                $(hash).modal('toggle');
+            }
+            run_random();
+        });
+
+        function run_random() {
+            $("#random-box .player-box").sort(() => Math.random() - 0.5).each(function(){
+                $(this).css({
+                    "width": `${20+Math.random()*30}%`,
+                    "transform": `scale(${1+Math.random()}) translate(${Math.random()*20 - 10}px, ${Math.random()*20 - 10}px)`,
+                });
+                $("#random-box").append(this);
+            });
+        }
+        $(".out-box a[data-bs-toggle='modal']").on("click", function(e) {
+            const url = new URL(window.location);
+            url.hash = $(this).data("bs-target");
+            window.history.replaceState({}, '', url);
+        });
+        $(".btn-close").on("click", function(e) {
+            const url = new URL(window.location);
+            url.hash = "";
+            window.history.replaceState({}, '', url);
+            $("audio").each(function() {
+                $(this)[0].pause();
+            });
+            $(".player").each(function() {
+                $(this).removeClass("play");
+                $(this).addClass("pause");
+            })
+        });
+
+        $(".player").on("click", function(e) {
+            e.preventDefault();
+            let audioDom = $($(this).data("audio"))[0];
+            if(audioDom.paused) {
+                audioDom.play();
+                $(this).removeClass("pause");
+                $(this).addClass("play");
+            } else {
+                audioDom.pause();
+                $(this).removeClass("play");
+                $(this).addClass("pause");
+            }
+        });
+
+        $(".arrow-group a").on("click", function(e) {
+            e.preventDefault();
+            let target = $(this).data("target");
+            $("button[data-bs-dismiss='modal']").trigger("click");
+            const url = new URL(window.location);
+            url.hash = target;
+            window.history.replaceState({}, '', url);
+            $(target).modal("show");
+        });
