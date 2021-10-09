@@ -101,24 +101,6 @@ block script
             $("audio").each(function() {
                 $(this)[0].pause();
             });
-            $(".player").each(function() {
-                $(this).removeClass("play");
-                $(this).addClass("pause");
-            })
-        });
-
-        $(".player").on("click", function(e) {
-            e.preventDefault();
-            let audioDom = $($(this).data("audio"))[0];
-            if(audioDom.paused) {
-                audioDom.play();
-                $(this).removeClass("pause");
-                $(this).addClass("play");
-            } else {
-                audioDom.pause();
-                $(this).removeClass("play");
-                $(this).addClass("pause");
-            }
         });
 
         $(".arrow-group a").on("click", function(e) {

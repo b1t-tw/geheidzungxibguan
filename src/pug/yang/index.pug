@@ -179,19 +179,6 @@ block body
 
 block script
     script.
-        $(".player").on("click", function(e) {
-            e.preventDefault();
-            let audioDom = $($(this).data("audio"))[0];
-            if(audioDom.paused) {
-                audioDom.play();
-                $(this).removeClass("pause");
-                $(this).addClass("play");
-            } else {
-                audioDom.pause();
-                $(this).removeClass("play");
-                $(this).addClass("pause");
-            }
-        });
         $(function() {
             $("#bgm")[0].play();
             if(!$("#bgm")[0].paused) {

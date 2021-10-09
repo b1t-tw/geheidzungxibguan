@@ -37,6 +37,32 @@ html(lang="zh-Hant-TW")
                 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
                 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
                     return new bootstrap.Popover(popoverTriggerEl)
-                })
+                });
+
+                $("audio").each(function() {
+                    $(this)[0].addEventListener("pause", function() {
+                        let id = $(this).attr("id");
+                        let playerDom = $(`.player[data-audio='#${id}']`);
+                        playerDom.removeClass("play");
+                        playerDom.addClass("pause");
+                    });
+                    $(this)[0].addEventListener("play", function() {
+                        let id = $(this).attr("id");
+                        let playerDom = $(`.player[data-audio='#${id}']`);
+                        playerDom.removeClass("pause");
+                        playerDom.addClass("play");
+                    });
+                });
+
+                $(".player").on("click", function(e) {
+                    e.preventDefault();
+                    let audioDom = $($(this).data("audio"))[0];
+                    if(audioDom.paused) {
+                        audioDom.play();
+                    } else {
+                        audioDom.pause();
+                    }
+                });
+                
             });
         block script
