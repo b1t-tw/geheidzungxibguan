@@ -27,6 +27,11 @@ h1, h2, h3, h4 {
   font-weight: bold;
 }
 
+small {
+  font-size: 0.75em;
+  opacity: 0.8;
+}
+
 @keyframes img-float {
   0% {
     transform: translate(0, 0px);
